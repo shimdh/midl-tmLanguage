@@ -3,18 +3,29 @@
 	"name": "Midl",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#preprocessor"
 		},
 		{
-			"include": "#strings"
+			"include": "#comment"
+		},
+		{
+			"include": "#directives"
+		},
+		{
+			"include": "#declarations"
+		},
+		{
+			"include": "#script-top-level"
 		}
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.midl",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.midl",
+					"match": "\\b(if|while|for|return)\\b"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.midl",
