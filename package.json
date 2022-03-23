@@ -1,0 +1,25 @@
+{
+    "name": "midl-lang",
+    "displayName": "midl Lang",
+    "description": "Syntax highlighting for midl lang ",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.65.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "midl",
+            "aliases": ["Midl", "midl"],
+            "extensions": [".midl"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "midl",
+            "scopeName": "source.midl",
+            "path": "./syntaxes/midl.tmLanguage.json"
+        }]
+    }
+}
