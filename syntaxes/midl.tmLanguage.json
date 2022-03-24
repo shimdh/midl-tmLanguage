@@ -37,6 +37,17 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.cql",
+				"match":  "(\/\/\/).*$\n?",
+				"captures": {
+					"1": {
+						"name": "punctuation.definition.comment.midl"
+					}
+				}
+			}]
 		}
 	},
 	"scopeName": "source.midl"
