@@ -40,7 +40,7 @@
 		},
 		"comments": {
 			"patterns": [{
-				"name": "comment.line.cql",
+				"name": "comment.line.midl",
 				"match":  "(\/\/\/).*$\n?",
 				"captures": {
 					"1": {
