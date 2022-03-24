@@ -1,6 +1,6 @@
 {
     "name": "C#",
-    "scopeName": "source.cs",
+    "scopeName": "source.midl",
     "fileTypes": [
       "cs"
     ],
@@ -362,13 +362,13 @@
         "begin": "\\s*(extern)\\b\\s*(alias)\\b\\s*(@?[_[:alpha:]][_[:alnum:]]*)",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.extern.cs"
+            "name": "keyword.other.extern.midl"
           },
           "2": {
-            "name": "keyword.other.alias.cs"
+            "name": "keyword.other.alias.midl"
           },
           "3": {
-            "name": "variable.other.alias.cs"
+            "name": "variable.other.alias.midl"
           }
         },
         "end": "(?=;)"
@@ -379,10 +379,10 @@
             "begin": "\\b(using)\\b\\s+(static)\\s+",
             "beginCaptures": {
               "1": {
-                "name": "keyword.other.using.cs"
+                "name": "keyword.other.using.midl"
               },
               "2": {
-                "name": "keyword.other.static.cs"
+                "name": "keyword.other.static.midl"
               }
             },
             "end": "(?=;)",
@@ -396,10 +396,10 @@
             "begin": "\\b(using)\\s+(?=(@?[_[:alpha:]][_[:alnum:]]*)\\s*=)",
             "beginCaptures": {
               "1": {
-                "name": "keyword.other.using.cs"
+                "name": "keyword.other.using.midl"
               },
               "2": {
-                "name": "entity.name.type.alias.cs"
+                "name": "entity.name.type.alias.midl"
               }
             },
             "end": "(?=;)",
@@ -419,7 +419,7 @@
             "begin": "\\b(using)\\s*",
             "beginCaptures": {
               "1": {
-                "name": "keyword.other.using.cs"
+                "name": "keyword.other.using.midl"
               }
             },
             "end": "(?=;)",
@@ -428,7 +428,7 @@
                 "include": "#comment"
               },
               {
-                "name": "entity.name.type.namespace.cs",
+                "name": "entity.name.type.namespace.midl",
                 "match": "@?[_[:alpha:]][_[:alnum:]]*"
               },
               {
@@ -442,19 +442,19 @@
         "begin": "(\\[)(assembly|module|field|event|method|param|property|return|type)?(\\:)?",
         "beginCaptures": {
           "1": {
-            "name": "punctuation.squarebracket.open.cs"
+            "name": "punctuation.squarebracket.open.midl"
           },
           "2": {
-            "name": "keyword.other.attribute-specifier.cs"
+            "name": "keyword.other.attribute-specifier.midl"
           },
           "3": {
-            "name": "punctuation.separator.colon.cs"
+            "name": "punctuation.separator.colon.midl"
           }
         },
         "end": "(\\])",
         "endCaptures": {
           "1": {
-            "name": "punctuation.squarebracket.close.cs"
+            "name": "punctuation.squarebracket.close.midl"
           }
         },
         "patterns": [
@@ -483,13 +483,13 @@
         "begin": "(\\()",
         "beginCaptures": {
           "1": {
-            "name": "punctuation.parenthesis.open.cs"
+            "name": "punctuation.parenthesis.open.midl"
           }
         },
         "end": "(\\))",
         "endCaptures": {
           "1": {
-            "name": "punctuation.parenthesis.close.cs"
+            "name": "punctuation.parenthesis.close.midl"
           }
         },
         "patterns": [
@@ -508,7 +508,7 @@
         "begin": "(@?[_[:alpha:]][_[:alnum:]]*)\\s*(?==)",
         "beginCaptures": {
           "1": {
-            "name": "entity.name.variable.property.cs"
+            "name": "entity.name.variable.property.midl"
           }
         },
         "end": "(?=(,|\\)))",
@@ -525,7 +525,7 @@
         "begin": "\\b(namespace)\\s+",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.namespace.cs"
+            "name": "keyword.other.namespace.midl"
           }
         },
         "end": "(?<=\\})|(?=;)",
@@ -534,7 +534,7 @@
             "include": "#comment"
           },
           {
-            "name": "entity.name.type.namespace.cs",
+            "name": "entity.name.type.namespace.midl",
             "match": "@?[_[:alpha:]][_[:alnum:]]*"
           },
           {
@@ -544,13 +544,13 @@
             "begin": "\\{",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.curlybrace.open.cs"
+                "name": "punctuation.curlybrace.open.midl"
               }
             },
             "end": "\\}",
             "endCaptures": {
               "0": {
-                "name": "punctuation.curlybrace.close.cs"
+                "name": "punctuation.curlybrace.close.midl"
               }
             },
             "patterns": [
@@ -568,7 +568,7 @@
         ]
       },
       "storage-modifier": {
-        "name": "storage.modifier.cs",
+        "name": "storage.modifier.midl",
         "match": "(?<!\\.)\\b(new|public|protected|internal|private|abstract|virtual|override|sealed|static|partial|readonly|volatile|const|extern|async|unsafe|ref)\\b"
       },
       "class-declaration": {
@@ -579,10 +579,10 @@
             "begin": "(?x)\n\\b(class)\\b\\s+\n(@?[_[:alpha:]][_[:alnum:]]*)\\s*",
             "beginCaptures": {
               "1": {
-                "name": "keyword.other.class.cs"
+                "name": "keyword.other.class.midl"
               },
               "2": {
-                "name": "entity.name.type.class.cs"
+                "name": "entity.name.type.class.midl"
               }
             },
             "end": "(?=\\{)",
@@ -605,13 +605,13 @@
             "begin": "\\{",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.curlybrace.open.cs"
+                "name": "punctuation.curlybrace.open.midl"
               }
             },
             "end": "\\}",
             "endCaptures": {
               "0": {
-                "name": "punctuation.curlybrace.close.cs"
+                "name": "punctuation.curlybrace.close.midl"
               }
             },
             "patterns": [
@@ -632,7 +632,7 @@
         "begin": "(?x)\n(?:\\b(delegate)\\b)\\s+\n(?<type_name>\n  (?:\n    (?:ref\\s+(?:readonly\\s+)?)?   # ref return\n    (?:\n      (?:(?<identifier>@?[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n      (?<name_and_type_args> # identifier + type arguments (if any)\n        \\g<identifier>\\s*\n        (?<type_args>\\s*<(?:[^<>]|\\g<type_args>)+>\\s*)?\n      )\n      (?:\\s*\\.\\s*\\g<name_and_type_args>)* | # Are there any more names being dotted into?\n      (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n    )\n    (?:\\s*\\?\\s*)? # nullable suffix?\n    (?:\\s* # array suffix?\n      \\[\n        (?:\\s*,\\s*)* # commata for multi-dimensional arrays\n      \\]\n      \\s*\n      (?:\\?)? # arrays can be nullable reference types\n      \\s*\n    )*\n  )\n)\\s+\n(\\g<identifier>)\\s*\n(<([^<>]+)>)?\\s*\n(?=\\()",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.delegate.cs"
+            "name": "keyword.other.delegate.midl"
           },
           "2": {
             "patterns": [
@@ -642,7 +642,7 @@
             ]
           },
           "7": {
-            "name": "entity.name.type.delegate.cs"
+            "name": "entity.name.type.delegate.midl"
           },
           "8": {
             "patterns": [
@@ -680,10 +680,10 @@
                 "match": "(enum)\\s+(@?[_[:alpha:]][_[:alnum:]]*)",
                 "captures": {
                   "1": {
-                    "name": "keyword.other.enum.cs"
+                    "name": "keyword.other.enum.midl"
                   },
                   "2": {
-                    "name": "entity.name.type.enum.cs"
+                    "name": "entity.name.type.enum.midl"
                   }
                 }
               },
@@ -691,7 +691,7 @@
                 "begin": ":",
                 "beginCaptures": {
                   "0": {
-                    "name": "punctuation.separator.colon.cs"
+                    "name": "punctuation.separator.colon.midl"
                   }
                 },
                 "end": "(?=\\{)",
@@ -707,13 +707,13 @@
             "begin": "\\{",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.curlybrace.open.cs"
+                "name": "punctuation.curlybrace.open.midl"
               }
             },
             "end": "\\}",
             "endCaptures": {
               "0": {
-                "name": "punctuation.curlybrace.close.cs"
+                "name": "punctuation.curlybrace.close.midl"
               }
             },
             "patterns": [
@@ -733,7 +733,7 @@
                 "begin": "@?[_[:alpha:]][_[:alnum:]]*",
                 "beginCaptures": {
                   "0": {
-                    "name": "entity.name.variable.enum-member.cs"
+                    "name": "entity.name.variable.enum-member.midl"
                   }
                 },
                 "end": "(?=(,|\\}))",
@@ -764,10 +764,10 @@
             "begin": "(?x)\n(interface)\\b\\s+\n(@?[_[:alpha:]][_[:alnum:]]*)",
             "beginCaptures": {
               "1": {
-                "name": "keyword.other.interface.cs"
+                "name": "keyword.other.interface.midl"
               },
               "2": {
-                "name": "entity.name.type.interface.cs"
+                "name": "entity.name.type.interface.midl"
               }
             },
             "end": "(?=\\{)",
@@ -790,13 +790,13 @@
             "begin": "\\{",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.curlybrace.open.cs"
+                "name": "punctuation.curlybrace.open.midl"
               }
             },
             "end": "\\}",
             "endCaptures": {
               "0": {
-                "name": "punctuation.curlybrace.close.cs"
+                "name": "punctuation.curlybrace.close.midl"
               }
             },
             "patterns": [
@@ -821,10 +821,10 @@
             "begin": "(?x)\n(record)\\b\\s+\n(@?[_[:alpha:]][_[:alnum:]]*)",
             "beginCaptures": {
               "1": {
-                "name": "keyword.other.record.cs"
+                "name": "keyword.other.record.midl"
               },
               "2": {
-                "name": "entity.name.type.record.cs"
+                "name": "entity.name.type.record.midl"
               }
             },
             "end": "(?=\\{)",
@@ -847,13 +847,13 @@
             "begin": "\\{",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.curlybrace.open.cs"
+                "name": "punctuation.curlybrace.open.midl"
               }
             },
             "end": "\\}",
             "endCaptures": {
               "0": {
-                "name": "punctuation.curlybrace.close.cs"
+                "name": "punctuation.curlybrace.close.midl"
               }
             },
             "patterns": [
@@ -878,10 +878,10 @@
             "begin": "(?x)\n(struct)\\b\\s+\n(@?[_[:alpha:]][_[:alnum:]]*)",
             "beginCaptures": {
               "1": {
-                "name": "keyword.other.struct.cs"
+                "name": "keyword.other.struct.midl"
               },
               "2": {
-                "name": "entity.name.type.struct.cs"
+                "name": "entity.name.type.struct.midl"
               }
             },
             "end": "(?=\\{)",
@@ -904,13 +904,13 @@
             "begin": "\\{",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.curlybrace.open.cs"
+                "name": "punctuation.curlybrace.open.midl"
               }
             },
             "end": "\\}",
             "endCaptures": {
               "0": {
-                "name": "punctuation.curlybrace.close.cs"
+                "name": "punctuation.curlybrace.close.midl"
               }
             },
             "patterns": [
@@ -931,13 +931,13 @@
         "begin": "\\<",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.definition.typeparameters.begin.cs"
+            "name": "punctuation.definition.typeparameters.begin.midl"
           }
         },
         "end": "\\>",
         "endCaptures": {
           "0": {
-            "name": "punctuation.definition.typeparameters.end.cs"
+            "name": "punctuation.definition.typeparameters.end.midl"
           }
         },
         "patterns": [
@@ -945,7 +945,7 @@
             "match": "\\b(in|out)\\b",
             "captures": {
               "1": {
-                "name": "storage.modifier.cs"
+                "name": "storage.modifier.midl"
               }
             }
           },
@@ -953,7 +953,7 @@
             "match": "(@?[_[:alpha:]][_[:alnum:]]*)\\b",
             "captures": {
               "1": {
-                "name": "entity.name.type.type-parameter.cs"
+                "name": "entity.name.type.type-parameter.midl"
               }
             }
           },
@@ -972,7 +972,7 @@
         "begin": ":",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.separator.colon.cs"
+            "name": "punctuation.separator.colon.midl"
           }
         },
         "end": "(?=\\{|where)",
@@ -992,36 +992,36 @@
         "begin": "(where)\\s+(@?[_[:alpha:]][_[:alnum:]]*)\\s*(:)",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.where.cs"
+            "name": "keyword.other.where.midl"
           },
           "2": {
-            "name": "entity.name.type.type-parameter.cs"
+            "name": "entity.name.type.type-parameter.midl"
           },
           "3": {
-            "name": "punctuation.separator.colon.cs"
+            "name": "punctuation.separator.colon.midl"
           }
         },
         "end": "(?=\\{|where|;|=>)",
         "patterns": [
           {
-            "name": "keyword.other.class.cs",
+            "name": "keyword.other.class.midl",
             "match": "\\bclass\\b"
           },
           {
-            "name": "keyword.other.struct.cs",
+            "name": "keyword.other.struct.midl",
             "match": "\\bstruct\\b"
           },
           {
             "match": "(new)\\s*(\\()\\s*(\\))",
             "captures": {
               "1": {
-                "name": "keyword.other.new.cs"
+                "name": "keyword.other.new.midl"
               },
               "2": {
-                "name": "punctuation.parenthesis.open.cs"
+                "name": "punctuation.parenthesis.open.midl"
               },
               "3": {
-                "name": "punctuation.parenthesis.close.cs"
+                "name": "punctuation.parenthesis.close.midl"
               }
             }
           },
@@ -1047,13 +1047,13 @@
             ]
           },
           "6": {
-            "name": "entity.name.variable.field.cs"
+            "name": "entity.name.variable.field.midl"
           }
         },
         "end": "(?=;)",
         "patterns": [
           {
-            "name": "entity.name.variable.field.cs",
+            "name": "entity.name.variable.field.midl",
             "match": "@?[_[:alpha:]][_[:alnum:]]*"
           },
           {
@@ -1091,7 +1091,7 @@
             ]
           },
           "8": {
-            "name": "entity.name.variable.property.cs"
+            "name": "entity.name.variable.property.midl"
           }
         },
         "end": "(?<=\\})|(?=;)",
@@ -1134,7 +1134,7 @@
             ]
           },
           "8": {
-            "name": "keyword.other.this.cs"
+            "name": "keyword.other.this.midl"
           }
         },
         "end": "(?<=\\})|(?=;)",
@@ -1160,7 +1160,7 @@
         "begin": "(?x)\n\\b(event)\\b\\s*\n(?<return_type>\n  (?<type_name>\n    (?:\n      (?:\n        (?:(?<identifier>@?[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n        (?<name_and_type_args> # identifier + type arguments (if any)\n          \\g<identifier>\\s*\n          (?<type_args>\\s*<(?:[^<>]|\\g<type_args>)+>\\s*)?\n        )\n        (?:\\s*\\.\\s*\\g<name_and_type_args>)* | # Are there any more names being dotted into?\n        (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n      )\n      (?:\\s*\\?\\s*)? # nullable suffix?\n      (?:\\s* # array suffix?\n        \\[\n          (?:\\s*,\\s*)* # commata for multi-dimensional arrays\n        \\]\n        \\s*\n        (?:\\?)? # arrays can be nullable reference types\n        \\s*\n      )*\n    )\n  )\\s+\n)\n(?<interface_name>\\g<type_name>\\s*\\.\\s*)?\n(?<event_names>\\g<identifier>(?:\\s*,\\s*\\g<identifier>)*)\\s*\n(?=\\{|;|$)",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.event.cs"
+            "name": "keyword.other.event.midl"
           },
           "2": {
             "patterns": [
@@ -1182,7 +1182,7 @@
           "9": {
             "patterns": [
               {
-                "name": "entity.name.variable.event.cs",
+                "name": "entity.name.variable.event.midl",
                 "match": "@?[_[:alpha:]][_[:alnum:]]*"
               },
               {
@@ -1208,30 +1208,30 @@
         "begin": "\\{",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.curlybrace.open.cs"
+            "name": "punctuation.curlybrace.open.midl"
           }
         },
         "end": "\\}",
         "endCaptures": {
           "0": {
-            "name": "punctuation.curlybrace.close.cs"
+            "name": "punctuation.curlybrace.close.midl"
           }
         },
         "patterns": [
           {
-            "name": "storage.modifier.cs",
+            "name": "storage.modifier.midl",
             "match": "\\b(private|protected|internal)\\b"
           },
           {
-            "name": "keyword.other.get.cs",
+            "name": "keyword.other.get.midl",
             "match": "\\b(get)\\b"
           },
           {
-            "name": "keyword.other.set.cs",
+            "name": "keyword.other.set.midl",
             "match": "\\b(set)\\b"
           },
           {
-            "name": "keyword.other.init.cs",
+            "name": "keyword.other.init.midl",
             "match": "\\b(init)\\b"
           },
           {
@@ -1255,22 +1255,22 @@
         "begin": "\\{",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.curlybrace.open.cs"
+            "name": "punctuation.curlybrace.open.midl"
           }
         },
         "end": "\\}",
         "endCaptures": {
           "0": {
-            "name": "punctuation.curlybrace.close.cs"
+            "name": "punctuation.curlybrace.close.midl"
           }
         },
         "patterns": [
           {
-            "name": "keyword.other.add.cs",
+            "name": "keyword.other.add.midl",
             "match": "\\b(add)\\b"
           },
           {
-            "name": "keyword.other.remove.cs",
+            "name": "keyword.other.remove.midl",
             "match": "\\b(remove)\\b"
           },
           {
@@ -1311,7 +1311,7 @@
             ]
           },
           "8": {
-            "name": "entity.name.function.cs"
+            "name": "entity.name.function.midl"
           },
           "9": {
             "patterns": [
@@ -1348,7 +1348,7 @@
             "match": "(@?[_[:alpha:]][_[:alnum:]]*)\\b",
             "captures": {
               "1": {
-                "name": "entity.name.function.cs"
+                "name": "entity.name.function.midl"
               }
             }
           },
@@ -1356,7 +1356,7 @@
             "begin": "(:)",
             "beginCaptures": {
               "1": {
-                "name": "punctuation.separator.colon.cs"
+                "name": "punctuation.separator.colon.midl"
               }
             },
             "end": "(?=\\{|=>)",
@@ -1387,10 +1387,10 @@
         "begin": "\\b(?:(base)|(this))\\b\\s*(?=\\()",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.base.cs"
+            "name": "keyword.other.base.midl"
           },
           "2": {
-            "name": "keyword.other.this.cs"
+            "name": "keyword.other.this.midl"
           }
         },
         "end": "(?<=\\))",
@@ -1404,10 +1404,10 @@
         "begin": "(~)(@?[_[:alpha:]][_[:alnum:]]*)\\s*(?=\\()",
         "beginCaptures": {
           "1": {
-            "name": "punctuation.tilde.cs"
+            "name": "punctuation.tilde.midl"
           },
           "2": {
-            "name": "entity.name.function.cs"
+            "name": "entity.name.function.midl"
           }
         },
         "end": "(?<=\\})|(?=;)",
@@ -1437,10 +1437,10 @@
             ]
           },
           "6": {
-            "name": "keyword.other.operator-decl.cs"
+            "name": "keyword.other.operator-decl.midl"
           },
           "7": {
-            "name": "entity.name.function.cs"
+            "name": "entity.name.function.midl"
           }
         },
         "end": "(?<=\\})|(?=;)",
@@ -1468,7 +1468,7 @@
                 "match": "\\b(explicit)\\b",
                 "captures": {
                   "1": {
-                    "name": "keyword.other.explicit.cs"
+                    "name": "keyword.other.explicit.midl"
                   }
                 }
               },
@@ -1476,14 +1476,14 @@
                 "match": "\\b(implicit)\\b",
                 "captures": {
                   "1": {
-                    "name": "keyword.other.implicit.cs"
+                    "name": "keyword.other.implicit.midl"
                   }
                 }
               }
             ]
           },
           "2": {
-            "name": "keyword.other.operator-decl.cs"
+            "name": "keyword.other.operator-decl.midl"
           },
           "3": {
             "patterns": [
@@ -1513,13 +1513,13 @@
         "begin": "\\{",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.curlybrace.open.cs"
+            "name": "punctuation.curlybrace.open.midl"
           }
         },
         "end": "\\}",
         "endCaptures": {
           "0": {
-            "name": "punctuation.curlybrace.close.cs"
+            "name": "punctuation.curlybrace.close.midl"
           }
         },
         "patterns": [
@@ -1532,7 +1532,7 @@
         "begin": "(?<!=|!)(=)(?!=|>)",
         "beginCaptures": {
           "1": {
-            "name": "keyword.operator.assignment.cs"
+            "name": "keyword.operator.assignment.midl"
           }
         },
         "end": "(?=[,\\)\\];}])",
@@ -1549,7 +1549,7 @@
         "begin": "=>",
         "beginCaptures": {
           "0": {
-            "name": "keyword.operator.arrow.cs"
+            "name": "keyword.operator.arrow.midl"
           }
         },
         "end": "(?=[,\\);}])",
@@ -1566,7 +1566,7 @@
         "begin": "(?<!\\.)\\b(goto)\\b",
         "beginCaptures": {
           "1": {
-            "name": "keyword.control.goto.cs"
+            "name": "keyword.control.goto.midl"
           }
         },
         "end": "(?=;)",
@@ -1575,7 +1575,7 @@
             "begin": "\\b(case)\\b",
             "beginCaptures": {
               "1": {
-                "name": "keyword.control.case.cs"
+                "name": "keyword.control.case.midl"
               }
             },
             "end": "(?=;)",
@@ -1589,12 +1589,12 @@
             "match": "\\b(default)\\b",
             "captures": {
               "1": {
-                "name": "keyword.control.default.cs"
+                "name": "keyword.control.default.midl"
               }
             }
           },
           {
-            "name": "entity.name.label.cs",
+            "name": "entity.name.label.midl",
             "match": "@?[_[:alpha:]][_[:alnum:]]*"
           }
         ]
@@ -1603,7 +1603,7 @@
         "begin": "(?<!\\.)\\b(return)\\b",
         "beginCaptures": {
           "1": {
-            "name": "keyword.control.flow.return.cs"
+            "name": "keyword.control.flow.return.midl"
           }
         },
         "end": "(?=;)",
@@ -1620,10 +1620,10 @@
         "match": "(?<!\\.)\\b(?:(break)|(continue))\\b",
         "captures": {
           "1": {
-            "name": "keyword.control.flow.break.cs"
+            "name": "keyword.control.flow.break.midl"
           },
           "2": {
-            "name": "keyword.control.flow.continue.cs"
+            "name": "keyword.control.flow.continue.midl"
           }
         }
       },
@@ -1631,7 +1631,7 @@
         "begin": "(?<!\\.)\\b(throw)\\b",
         "beginCaptures": {
           "1": {
-            "name": "keyword.control.flow.throw.cs"
+            "name": "keyword.control.flow.throw.midl"
           }
         },
         "end": "(?=;)",
@@ -1655,10 +1655,10 @@
         "begin": "(?<!\\.)\\b(yield)\\b\\s*\\b(return)\\b",
         "beginCaptures": {
           "1": {
-            "name": "keyword.control.flow.yield.cs"
+            "name": "keyword.control.flow.yield.midl"
           },
           "2": {
-            "name": "keyword.control.flow.return.cs"
+            "name": "keyword.control.flow.return.midl"
           }
         },
         "end": "(?=;)",
@@ -1672,10 +1672,10 @@
         "match": "(?<!\\.)\\b(yield)\\b\\s*\\b(break)\\b",
         "captures": {
           "1": {
-            "name": "keyword.control.flow.yield.cs"
+            "name": "keyword.control.flow.yield.midl"
           },
           "2": {
-            "name": "keyword.control.flow.break.cs"
+            "name": "keyword.control.flow.break.midl"
           }
         }
       },
@@ -1683,7 +1683,7 @@
         "begin": "(?<!\\.)\\b(await)\\b",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.await.cs"
+            "name": "keyword.other.await.midl"
           }
         },
         "end": "(?=;)",
@@ -1697,7 +1697,7 @@
         "begin": "(?<!\\.)\\b(if)\\b\\s*(?=\\()",
         "beginCaptures": {
           "1": {
-            "name": "keyword.control.conditional.if.cs"
+            "name": "keyword.control.conditional.if.midl"
           }
         },
         "end": "(?<=\\})|(?=;)",
@@ -1706,13 +1706,13 @@
             "begin": "\\(",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.parenthesis.open.cs"
+                "name": "punctuation.parenthesis.open.midl"
               }
             },
             "end": "\\)",
             "endCaptures": {
               "0": {
-                "name": "punctuation.parenthesis.close.cs"
+                "name": "punctuation.parenthesis.close.midl"
               }
             },
             "patterns": [
@@ -1730,7 +1730,7 @@
         "begin": "(?<!\\.)\\b(else)\\b",
         "beginCaptures": {
           "1": {
-            "name": "keyword.control.conditional.else.cs"
+            "name": "keyword.control.conditional.else.midl"
           }
         },
         "end": "(?<=\\})|(?=;)",
@@ -1744,7 +1744,7 @@
         "begin": "(?<!\\.)\\b(switch)\\b\\s*(?=\\()",
         "beginCaptures": {
           "1": {
-            "name": "keyword.control.switch.cs"
+            "name": "keyword.control.switch.midl"
           }
         },
         "end": "(?<=\\})",
@@ -1753,13 +1753,13 @@
             "begin": "\\(",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.parenthesis.open.cs"
+                "name": "punctuation.parenthesis.open.midl"
               }
             },
             "end": "\\)",
             "endCaptures": {
               "0": {
-                "name": "punctuation.parenthesis.close.cs"
+                "name": "punctuation.parenthesis.close.midl"
               }
             },
             "patterns": [
@@ -1772,13 +1772,13 @@
             "begin": "\\{",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.curlybrace.open.cs"
+                "name": "punctuation.curlybrace.open.midl"
               }
             },
             "end": "\\}",
             "endCaptures": {
               "0": {
-                "name": "punctuation.curlybrace.close.cs"
+                "name": "punctuation.curlybrace.close.midl"
               }
             },
             "patterns": [
@@ -1796,13 +1796,13 @@
         "begin": "(?x) (?<!\\.)\\b(switch)\\b",
         "beginCaptures": {
           "1": {
-            "name": "keyword.control.switch.cs"
+            "name": "keyword.control.switch.midl"
           }
         },
         "end": "(?<=\\})",
         "endCaptures": {
           "0": {
-            "name": "punctuation.curlybrace.close.cs"
+            "name": "punctuation.curlybrace.close.midl"
           }
         },
         "patterns": [
@@ -1810,13 +1810,13 @@
             "begin": "\\{",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.curlybrace.open.cs"
+                "name": "punctuation.curlybrace.open.midl"
               }
             },
             "end": "\\}",
             "endCaptures": {
               "0": {
-                "name": "punctuation.curlybrace.close.cs"
+                "name": "punctuation.curlybrace.close.midl"
               }
             },
             "patterns": [
@@ -1859,7 +1859,7 @@
             ]
           },
           "2": {
-            "name": "entity.name.variable.local.cs"
+            "name": "entity.name.variable.local.midl"
           }
         },
         "end": "(?==>)",
@@ -1883,13 +1883,13 @@
             ]
           },
           "6": {
-            "name": "punctuation.curlybrace.open.cs"
+            "name": "punctuation.curlybrace.open.midl"
           }
         },
         "end": "\\}",
         "endCaptures": {
           "0": {
-            "name": "punctuation.curlybrace.close.cs"
+            "name": "punctuation.curlybrace.close.midl"
           }
         },
         "patterns": [
@@ -1905,7 +1905,7 @@
         "begin": "(?x) # match foreach (var (x, y) in ...)\n(?:\\b(var)\\b\\s*)\n(?<tuple>\\((?:[^\\(\\)]|\\g<tuple>)+\\))\\s*",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.var.cs"
+            "name": "keyword.other.var.midl"
           },
           "2": {
             "patterns": [
@@ -1929,10 +1929,10 @@
         "begin": "(?<!\\.)\\b(when)\\b\\s*(\\()?",
         "beginCaptures": {
           "1": {
-            "name": "keyword.control.try.when.cs"
+            "name": "keyword.control.try.when.midl"
           },
           "2": {
-            "name": "punctuation.parenthesis.open.cs"
+            "name": "punctuation.parenthesis.open.midl"
           }
         },
         "end": "(?==>)",
@@ -1950,7 +1950,7 @@
             "match": "\\(",
             "captures": {
               "0": {
-                "name": "punctuation.parenthesis.open.cs"
+                "name": "punctuation.parenthesis.open.midl"
               }
             }
           },
@@ -1958,7 +1958,7 @@
             "match": "\\)",
             "captures": {
               "0": {
-                "name": "punctuation.parenthesis.close.cs"
+                "name": "punctuation.parenthesis.close.midl"
               }
             }
           }
@@ -1970,13 +1970,13 @@
             "begin": "(?<!\\.)\\b(case)\\b\\s+",
             "beginCaptures": {
               "1": {
-                "name": "keyword.control.case.cs"
+                "name": "keyword.control.case.midl"
               }
             },
             "end": ":",
             "endCaptures": {
               "0": {
-                "name": "punctuation.separator.colon.cs"
+                "name": "punctuation.separator.colon.midl"
               }
             },
             "patterns": [
@@ -1989,10 +1989,10 @@
             "match": "(?<!\\.)\\b(default)\\b\\s*(:)",
             "captures": {
               "1": {
-                "name": "keyword.control.default.cs"
+                "name": "keyword.control.default.midl"
               },
               "2": {
-                "name": "punctuation.separator.colon.cs"
+                "name": "punctuation.separator.colon.midl"
               }
             }
           }
@@ -2002,7 +2002,7 @@
         "begin": "(?<!\\.)\\b(do)\\b",
         "beginCaptures": {
           "1": {
-            "name": "keyword.control.loop.do.cs"
+            "name": "keyword.control.loop.do.midl"
           }
         },
         "end": "(?=;|})",
@@ -2016,7 +2016,7 @@
         "begin": "(?<!\\.)\\b(while)\\b\\s*(?=\\()",
         "beginCaptures": {
           "1": {
-            "name": "keyword.control.loop.while.cs"
+            "name": "keyword.control.loop.while.midl"
           }
         },
         "end": "(?<=\\})|(?=;)",
@@ -2025,13 +2025,13 @@
             "begin": "\\(",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.parenthesis.open.cs"
+                "name": "punctuation.parenthesis.open.midl"
               }
             },
             "end": "\\)",
             "endCaptures": {
               "0": {
-                "name": "punctuation.parenthesis.close.cs"
+                "name": "punctuation.parenthesis.close.midl"
               }
             },
             "patterns": [
@@ -2049,7 +2049,7 @@
         "begin": "(?<!\\.)\\b(for)\\b\\s*(?=\\()",
         "beginCaptures": {
           "1": {
-            "name": "keyword.control.loop.for.cs"
+            "name": "keyword.control.loop.for.midl"
           }
         },
         "end": "(?<=\\})|(?=;)",
@@ -2058,13 +2058,13 @@
             "begin": "\\(",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.parenthesis.open.cs"
+                "name": "punctuation.parenthesis.open.midl"
               }
             },
             "end": "\\)",
             "endCaptures": {
               "0": {
-                "name": "punctuation.parenthesis.close.cs"
+                "name": "punctuation.parenthesis.close.midl"
               }
             },
             "patterns": [
@@ -2091,7 +2091,7 @@
         "begin": "(?<!\\.)\\b(foreach)\\b\\s*(?=\\()",
         "beginCaptures": {
           "1": {
-            "name": "keyword.control.loop.foreach.cs"
+            "name": "keyword.control.loop.foreach.midl"
           }
         },
         "end": "(?<=\\})|(?=;)",
@@ -2100,13 +2100,13 @@
             "begin": "\\(",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.parenthesis.open.cs"
+                "name": "punctuation.parenthesis.open.midl"
               }
             },
             "end": "\\)",
             "endCaptures": {
               "0": {
-                "name": "punctuation.parenthesis.close.cs"
+                "name": "punctuation.parenthesis.close.midl"
               }
             },
             "patterns": [
@@ -2114,7 +2114,7 @@
                 "match": "(?x)\n(?:\n  (\\bvar\\b)|\n  (?<type_name>\n    (?:\n      (?:\n        (?:(?<identifier>@?[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n        (?<name_and_type_args> # identifier + type arguments (if any)\n          \\g<identifier>\\s*\n          (?<type_args>\\s*<(?:[^<>]|\\g<type_args>)+>\\s*)?\n        )\n        (?:\\s*\\.\\s*\\g<name_and_type_args>)* | # Are there any more names being dotted into?\n        (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n      )\n      (?:\\s*\\?\\s*)? # nullable suffix?\n      (?:\\s* # array suffix?\n        \\[\n          (?:\\s*,\\s*)* # commata for multi-dimensional arrays\n        \\]\n        \\s*\n        (?:\\?)? # arrays can be nullable reference types\n        \\s*\n      )*\n    )\n  )\n)\\s+\n(\\g<identifier>)\\s+\n\\b(in)\\b",
                 "captures": {
                   "1": {
-                    "name": "keyword.other.var.cs"
+                    "name": "keyword.other.var.midl"
                   },
                   "2": {
                     "patterns": [
@@ -2124,10 +2124,10 @@
                     ]
                   },
                   "7": {
-                    "name": "entity.name.variable.local.cs"
+                    "name": "entity.name.variable.local.midl"
                   },
                   "8": {
-                    "name": "keyword.control.loop.in.cs"
+                    "name": "keyword.control.loop.in.midl"
                   }
                 }
               },
@@ -2135,7 +2135,7 @@
                 "match": "(?x) # match foreach (var (x, y) in ...)\n(?:\\b(var)\\b\\s*)?\n(?<tuple>\\((?:[^\\(\\)]|\\g<tuple>)+\\))\\s+\n\\b(in)\\b",
                 "captures": {
                   "1": {
-                    "name": "keyword.other.var.cs"
+                    "name": "keyword.other.var.midl"
                   },
                   "2": {
                     "patterns": [
@@ -2145,7 +2145,7 @@
                     ]
                   },
                   "3": {
-                    "name": "keyword.control.loop.in.cs"
+                    "name": "keyword.control.loop.in.midl"
                   }
                 }
               },
@@ -2176,7 +2176,7 @@
         "begin": "(?<!\\.)\\b(try)\\b",
         "beginCaptures": {
           "1": {
-            "name": "keyword.control.try.cs"
+            "name": "keyword.control.try.midl"
           }
         },
         "end": "(?<=\\})",
@@ -2193,7 +2193,7 @@
         "begin": "(?<!\\.)\\b(finally)\\b",
         "beginCaptures": {
           "1": {
-            "name": "keyword.control.try.finally.cs"
+            "name": "keyword.control.try.finally.midl"
           }
         },
         "end": "(?<=\\})",
@@ -2210,7 +2210,7 @@
         "begin": "(?<!\\.)\\b(catch)\\b",
         "beginCaptures": {
           "1": {
-            "name": "keyword.control.try.catch.cs"
+            "name": "keyword.control.try.catch.midl"
           }
         },
         "end": "(?<=\\})",
@@ -2219,13 +2219,13 @@
             "begin": "\\(",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.parenthesis.open.cs"
+                "name": "punctuation.parenthesis.open.midl"
               }
             },
             "end": "\\)",
             "endCaptures": {
               "0": {
-                "name": "punctuation.parenthesis.close.cs"
+                "name": "punctuation.parenthesis.close.midl"
               }
             },
             "patterns": [
@@ -2240,7 +2240,7 @@
                     ]
                   },
                   "6": {
-                    "name": "entity.name.variable.local.cs"
+                    "name": "entity.name.variable.local.midl"
                   }
                 }
               }
@@ -2261,16 +2261,16 @@
         "begin": "(?<!\\.)\\b(when)\\b\\s*(\\()",
         "beginCaptures": {
           "1": {
-            "name": "keyword.control.try.when.cs"
+            "name": "keyword.control.try.when.midl"
           },
           "2": {
-            "name": "punctuation.parenthesis.open.cs"
+            "name": "punctuation.parenthesis.open.midl"
           }
         },
         "end": "\\)",
         "endCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.close.cs"
+            "name": "punctuation.parenthesis.close.midl"
           }
         },
         "patterns": [
@@ -2286,10 +2286,10 @@
         "begin": "(?<!\\.)\\b(?:(checked)|(unchecked))\\b\\s*(?!\\()",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.checked.cs"
+            "name": "keyword.other.checked.midl"
           },
           "2": {
-            "name": "keyword.other.unchecked.cs"
+            "name": "keyword.other.unchecked.midl"
           }
         },
         "end": "(?<=\\})",
@@ -2306,7 +2306,7 @@
         "begin": "(?<!\\.)\\b(lock)\\b\\s*(?=\\()",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.lock.cs"
+            "name": "keyword.other.lock.midl"
           }
         },
         "end": "(?<=\\})|(?=;)",
@@ -2315,13 +2315,13 @@
             "begin": "\\(",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.parenthesis.open.cs"
+                "name": "punctuation.parenthesis.open.midl"
               }
             },
             "end": "\\)",
             "endCaptures": {
               "0": {
-                "name": "punctuation.parenthesis.close.cs"
+                "name": "punctuation.parenthesis.close.midl"
               }
             },
             "patterns": [
@@ -2339,7 +2339,7 @@
         "begin": "(?<!\\.)\\b(using)\\b\\s*(?=\\()",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.using.cs"
+            "name": "keyword.other.using.midl"
           }
         },
         "end": "(?=\\;|})",
@@ -2348,13 +2348,13 @@
             "begin": "\\(",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.parenthesis.open.cs"
+                "name": "punctuation.parenthesis.open.midl"
               }
             },
             "end": "\\)",
             "endCaptures": {
               "0": {
-                "name": "punctuation.parenthesis.close.cs"
+                "name": "punctuation.parenthesis.close.midl"
               }
             },
             "patterns": [
@@ -2375,10 +2375,10 @@
         "match": "(@?[_[:alpha:]][_[:alnum:]]*)\\s*(:)",
         "captures": {
           "1": {
-            "name": "entity.name.label.cs"
+            "name": "entity.name.label.midl"
           },
           "2": {
-            "name": "punctuation.separator.colon.cs"
+            "name": "punctuation.separator.colon.midl"
           }
         }
       },
@@ -2402,16 +2402,16 @@
         "begin": "(?x)\n(?:\n  (?:(\\busing)\\s+)?\n  (?:(\\bref)\\s+(?:(\\breadonly)\\s+)?)?(\\bvar\\b)| # ref local\n  (?<type_name>\n    (?:\n      (?:ref\\s+(?:readonly\\s+)?)?   # ref local\n      (?:\n        (?:(?<identifier>@?[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n        (?<name_and_type_args> # identifier + type arguments (if any)\n          \\g<identifier>\\s*\n          (?<type_args>\\s*<(?:[^<>]|\\g<type_args>)+>\\s*)?\n        )\n        (?:\\s*\\.\\s*\\g<name_and_type_args>)* | # Are there any more names being dotted into?\n        (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n      )\n      (?:\\s*\\?\\s*)? # nullable suffix?\n      (?:\\s* # array suffix?\n        \\[\n          (?:\\s*,\\s*)* # commata for multi-dimensional arrays\n        \\]\n        \\s*\n        (?:\\?)? # arrays can be nullable reference types\n        \\s*\n      )*\n    )\n  )\n)\\s+\n(\\g<identifier>)\\s*\n(?!=>)\n(?=,|;|=|\\))",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.using.cs"
+            "name": "keyword.other.using.midl"
           },
           "2": {
-            "name": "storage.modifier.cs"
+            "name": "storage.modifier.midl"
           },
           "3": {
-            "name": "storage.modifier.cs"
+            "name": "storage.modifier.midl"
           },
           "4": {
-            "name": "keyword.other.var.cs"
+            "name": "keyword.other.var.midl"
           },
           "5": {
             "patterns": [
@@ -2421,13 +2421,13 @@
             ]
           },
           "10": {
-            "name": "entity.name.variable.local.cs"
+            "name": "entity.name.variable.local.midl"
           }
         },
         "end": "(?=;|\\))",
         "patterns": [
           {
-            "name": "entity.name.variable.local.cs",
+            "name": "entity.name.variable.local.midl",
             "match": "@?[_[:alpha:]][_[:alnum:]]*"
           },
           {
@@ -2445,7 +2445,7 @@
         "begin": "(?x)\n(?<const_keyword>\\b(?:const)\\b)\\s*\n(?<type_name>\n  (?:\n    (?:\n      (?:(?<identifier>@?[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n      (?<name_and_type_args> # identifier + type arguments (if any)\n        \\g<identifier>\\s*\n        (?<type_args>\\s*<(?:[^<>]|\\g<type_args>)+>\\s*)?\n      )\n      (?:\\s*\\.\\s*\\g<name_and_type_args>)* | # Are there any more names being dotted into?\n      (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n    )\n    (?:\\s*\\?\\s*)? # nullable suffix?\n    (?:\\s* # array suffix?\n      \\[\n        (?:\\s*,\\s*)* # commata for multi-dimensional arrays\n      \\]\n      \\s*\n      (?:\\?)? # arrays can be nullable reference types\n      \\s*\n    )*\n  )\n)\\s+\n(\\g<identifier>)\\s*\n(?=,|;|=)",
         "beginCaptures": {
           "1": {
-            "name": "storage.modifier.cs"
+            "name": "storage.modifier.midl"
           },
           "2": {
             "patterns": [
@@ -2455,13 +2455,13 @@
             ]
           },
           "7": {
-            "name": "entity.name.variable.local.cs"
+            "name": "entity.name.variable.local.midl"
           }
         },
         "end": "(?=;)",
         "patterns": [
           {
-            "name": "entity.name.variable.local.cs",
+            "name": "entity.name.variable.local.midl",
             "match": "@?[_[:alpha:]][_[:alnum:]]*"
           },
           {
@@ -2486,7 +2486,7 @@
         "begin": "(?x) # e.g. var (x, y) = GetPoint();\n(?:\\b(var)\\b\\s*)\n(?<tuple>\\((?:[^\\(\\)]|\\g<tuple>)+\\))\\s*\n(?=;|=|\\))",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.var.cs"
+            "name": "keyword.other.var.midl"
           },
           "2": {
             "patterns": [
@@ -2522,13 +2522,13 @@
         "begin": "\\(",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.open.cs"
+            "name": "punctuation.parenthesis.open.midl"
           }
         },
         "end": "\\)",
         "endCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.close.cs"
+            "name": "punctuation.parenthesis.close.midl"
           }
         },
         "patterns": [
@@ -2548,7 +2548,7 @@
             "match": "(?x) # e.g. x\n(@?[_[:alpha:]][_[:alnum:]]*)\\b\\s*\n(?=[,)])",
             "captures": {
               "1": {
-                "name": "entity.name.variable.tuple-element.cs"
+                "name": "entity.name.variable.tuple-element.midl"
               }
             }
           }
@@ -2558,13 +2558,13 @@
         "begin": "\\(",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.open.cs"
+            "name": "punctuation.parenthesis.open.midl"
           }
         },
         "end": "\\)",
         "endCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.close.cs"
+            "name": "punctuation.parenthesis.close.midl"
           }
         },
         "patterns": [
@@ -2584,7 +2584,7 @@
             "match": "(?x) # e.g. x\n(@?[_[:alpha:]][_[:alnum:]]*)\\b\\s*\n(?=[,)])",
             "captures": {
               "1": {
-                "name": "variable.other.readwrite.cs"
+                "name": "variable.other.readwrite.midl"
               }
             }
           }
@@ -2594,7 +2594,7 @@
         "match": "(?x) # e.g. int x OR var x\n(?:\n  \\b(var)\\b|\n  (?<type_name>\n    (?:\n      (?:\n        (?:(?<identifier>@?[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n        (?<name_and_type_args> # identifier + type arguments (if any)\n          \\g<identifier>\\s*\n          (?<type_args>\\s*<(?:[^<>]|\\g<type_args>)+>\\s*)?\n        )\n        (?:\\s*\\.\\s*\\g<name_and_type_args>)* | # Are there any more names being dotted into?\n        (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n      )\n      (?:\\s*\\?\\s*)? # nullable suffix?\n      (?:\\s* # array suffix?\n        \\[\n          (?:\\s*,\\s*)* # commata for multi-dimensional arrays\n        \\]\n        \\s*\n        (?:\\?)? # arrays can be nullable reference types\n        \\s*\n      )*\n    )\n  )\n)\\s+\n(\\g<identifier>)\\b\\s*\n(?=[,)\\]])",
         "captures": {
           "1": {
-            "name": "keyword.other.var.cs"
+            "name": "keyword.other.var.midl"
           },
           "2": {
             "patterns": [
@@ -2604,7 +2604,7 @@
             ]
           },
           "7": {
-            "name": "entity.name.variable.local.cs"
+            "name": "entity.name.variable.local.midl"
           }
         }
       },
@@ -2612,7 +2612,7 @@
         "match": "(?x) # e.g. int x OR var x\n(?:\n  \\b(var)\\b|\n  (?<type_name>\n    (?:\n      (?:\n        (?:(?<identifier>@?[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n        (?<name_and_type_args> # identifier + type arguments (if any)\n          \\g<identifier>\\s*\n          (?<type_args>\\s*<(?:[^<>]|\\g<type_args>)+>\\s*)?\n        )\n        (?:\\s*\\.\\s*\\g<name_and_type_args>)* | # Are there any more names being dotted into?\n        (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n      )\n      (?:\\s*\\?\\s*)? # nullable suffix?\n                (?:\\s* # array suffix?\n      \\[\n        (?:\\s*,\\s*)* # commata for multi-dimensional arrays\n      \\]\n      \\s*\n      (?:\\?)? # arrays can be nullable reference types\n      \\s*\n    )*\n    )\n  )\n)\\s+\n(\\g<identifier>)\\b\\s*\n(?=[,)])",
         "captures": {
           "1": {
-            "name": "keyword.other.var.cs"
+            "name": "keyword.other.var.midl"
           },
           "2": {
             "patterns": [
@@ -2622,7 +2622,7 @@
             ]
           },
           "7": {
-            "name": "entity.name.variable.tuple-element.cs"
+            "name": "entity.name.variable.tuple-element.midl"
           }
         }
       },
@@ -2630,19 +2630,19 @@
         "begin": "(?<!\\.)\\b(?:(checked)|(unchecked))\\b\\s*(\\()",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.checked.cs"
+            "name": "keyword.other.checked.midl"
           },
           "2": {
-            "name": "keyword.other.unchecked.cs"
+            "name": "keyword.other.unchecked.midl"
           },
           "3": {
-            "name": "punctuation.parenthesis.open.cs"
+            "name": "punctuation.parenthesis.open.midl"
           }
         },
         "end": "\\)",
         "endCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.close.cs"
+            "name": "punctuation.parenthesis.close.midl"
           }
         },
         "patterns": [
@@ -2655,19 +2655,19 @@
         "begin": "(?<!\\.)\\b(?:(typeof)|(default))\\b\\s*(\\()",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.typeof.cs"
+            "name": "keyword.other.typeof.midl"
           },
           "2": {
-            "name": "keyword.other.default.cs"
+            "name": "keyword.other.default.midl"
           },
           "3": {
-            "name": "punctuation.parenthesis.open.cs"
+            "name": "punctuation.parenthesis.open.midl"
           }
         },
         "end": "\\)",
         "endCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.close.cs"
+            "name": "punctuation.parenthesis.close.midl"
           }
         },
         "patterns": [
@@ -2680,16 +2680,16 @@
         "begin": "(?<!\\.)\\b(nameof)\\b\\s*(\\()",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.nameof.cs"
+            "name": "keyword.other.nameof.midl"
           },
           "2": {
-            "name": "punctuation.parenthesis.open.cs"
+            "name": "punctuation.parenthesis.open.midl"
           }
         },
         "end": "\\)",
         "endCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.close.cs"
+            "name": "punctuation.parenthesis.close.midl"
           }
         },
         "patterns": [
@@ -2702,25 +2702,25 @@
         "match": "(?<!\\.)\\b(throw)\\b",
         "captures": {
           "1": {
-            "name": "keyword.control.flow.throw.cs"
+            "name": "keyword.control.flow.throw.midl"
           }
         }
       },
       "interpolated-string": {
-        "name": "string.quoted.double.cs",
+        "name": "string.quoted.double.midl",
         "begin": "\\$\"",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.definition.string.begin.cs"
+            "name": "punctuation.definition.string.begin.midl"
           }
         },
         "end": "(\")|((?:[^\\\\\\n])$)",
         "endCaptures": {
           "1": {
-            "name": "punctuation.definition.string.end.cs"
+            "name": "punctuation.definition.string.end.midl"
           },
           "2": {
-            "name": "invalid.illegal.newline.cs"
+            "name": "invalid.illegal.newline.midl"
           }
         },
         "patterns": [
@@ -2733,17 +2733,17 @@
         ]
       },
       "verbatim-interpolated-string": {
-        "name": "string.quoted.double.cs",
+        "name": "string.quoted.double.midl",
         "begin": "(?:\\$@|@\\$)\"",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.definition.string.begin.cs"
+            "name": "punctuation.definition.string.begin.midl"
           }
         },
         "end": "\"(?=[^\"])",
         "endCaptures": {
           "0": {
-            "name": "punctuation.definition.string.end.cs"
+            "name": "punctuation.definition.string.end.midl"
           }
         },
         "patterns": [
@@ -2756,20 +2756,20 @@
         ]
       },
       "interpolation": {
-        "name": "meta.interpolation.cs",
+        "name": "meta.interpolation.midl",
         "begin": "(?<=[^\\{]|^)((?:\\{\\{)*)(\\{)(?=[^\\{])",
         "beginCaptures": {
           "1": {
-            "name": "string.quoted.double.cs"
+            "name": "string.quoted.double.midl"
           },
           "2": {
-            "name": "punctuation.definition.interpolation.begin.cs"
+            "name": "punctuation.definition.interpolation.begin.midl"
           }
         },
         "end": "\\}",
         "endCaptures": {
           "0": {
-            "name": "punctuation.definition.interpolation.end.cs"
+            "name": "punctuation.definition.interpolation.end.midl"
           }
         },
         "patterns": [
@@ -2806,17 +2806,17 @@
       "boolean-literal": {
         "patterns": [
           {
-            "name": "constant.language.boolean.true.cs",
+            "name": "constant.language.boolean.true.midl",
             "match": "(?<!\\.)\\btrue\\b"
           },
           {
-            "name": "constant.language.boolean.false.cs",
+            "name": "constant.language.boolean.false.midl",
             "match": "(?<!\\.)\\bfalse\\b"
           }
         ]
       },
       "null-literal": {
-        "name": "constant.language.null.cs",
+        "name": "constant.language.null.midl",
         "match": "(?<!\\.)\\bnull\\b"
       },
       "numeric-literal": {
@@ -2832,52 +2832,52 @@
                     "match": "(\\G(?=[0-9.])(?!0[xXbB]))([0-9](?:[0-9]|((?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)?((?:(?<=[0-9])|\\.(?=[0-9])))([0-9](?:[0-9]|((?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)?((?<!_)([eE])(\\+?)(\\-?)((?:[0-9](?:[0-9]|(?:(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)))?([fFdDmM](?!\\w))?$",
                     "captures": {
                       "2": {
-                        "name": "constant.numeric.decimal.cs",
+                        "name": "constant.numeric.decimal.midl",
                         "patterns": [
                           {
                             "match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
-                            "name": "constant.numeric.other.separator.thousands.cs"
+                            "name": "constant.numeric.other.separator.thousands.midl"
                           }
                         ]
                       },
                       "3": {
-                        "name": "constant.numeric.other.separator.thousands.cs"
+                        "name": "constant.numeric.other.separator.thousands.midl"
                       },
                       "4": {
-                        "name": "constant.numeric.other.separator.decimals.cs"
+                        "name": "constant.numeric.other.separator.decimals.midl"
                       },
                       "5": {
-                        "name": "constant.numeric.decimal.cs",
+                        "name": "constant.numeric.decimal.midl",
                         "patterns": [
                           {
                             "match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
-                            "name": "constant.numeric.other.separator.thousands.cs"
+                            "name": "constant.numeric.other.separator.thousands.midl"
                           }
                         ]
                       },
                       "6": {
-                        "name": "constant.numeric.other.separator.thousands.cs"
+                        "name": "constant.numeric.other.separator.thousands.midl"
                       },
                       "8": {
-                        "name": "constant.numeric.other.exponent.cs"
+                        "name": "constant.numeric.other.exponent.midl"
                       },
                       "9": {
-                        "name": "keyword.operator.arithmetic.cs"
+                        "name": "keyword.operator.arithmetic.midl"
                       },
                       "10": {
-                        "name": "keyword.operator.arithmetic.cs"
+                        "name": "keyword.operator.arithmetic.midl"
                       },
                       "11": {
-                        "name": "constant.numeric.decimal.cs",
+                        "name": "constant.numeric.decimal.midl",
                         "patterns": [
                           {
                             "match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
-                            "name": "constant.numeric.other.separator.thousands.cs"
+                            "name": "constant.numeric.other.separator.thousands.midl"
                           }
                         ]
                       },
                       "12": {
-                        "name": "constant.numeric.other.suffix.cs"
+                        "name": "constant.numeric.other.suffix.midl"
                       }
                     }
                   },
@@ -2885,22 +2885,22 @@
                     "match": "(\\G0[bB])([01_](?:[01_]|((?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)((?:(?:(?:(?:(?:[uU]|[uU]l)|[uU]L)|l[uU]?)|L[uU]?)|[fFdDmM])(?!\\w))?$",
                     "captures": {
                       "1": {
-                        "name": "constant.numeric.other.preffix.binary.cs"
+                        "name": "constant.numeric.other.preffix.binary.midl"
                       },
                       "2": {
-                        "name": "constant.numeric.binary.cs",
+                        "name": "constant.numeric.binary.midl",
                         "patterns": [
                           {
                             "match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
-                            "name": "constant.numeric.other.separator.thousands.cs"
+                            "name": "constant.numeric.other.separator.thousands.midl"
                           }
                         ]
                       },
                       "3": {
-                        "name": "constant.numeric.other.separator.thousands.cs"
+                        "name": "constant.numeric.other.separator.thousands.midl"
                       },
                       "4": {
-                        "name": "constant.numeric.other.suffix.cs"
+                        "name": "constant.numeric.other.suffix.midl"
                       }
                     }
                   },
@@ -2908,22 +2908,22 @@
                     "match": "(\\G0[xX])([0-9a-fA-F](?:[0-9a-fA-F]|((?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)((?:(?:(?:(?:(?:[uU]|[uU]l)|[uU]L)|l[uU]?)|L[uU]?)|[fFdDmM])(?!\\w))?$",
                     "captures": {
                       "1": {
-                        "name": "constant.numeric.other.preffix.hex.cs"
+                        "name": "constant.numeric.other.preffix.hex.midl"
                       },
                       "2": {
-                        "name": "constant.numeric.hex.cs",
+                        "name": "constant.numeric.hex.midl",
                         "patterns": [
                           {
                             "match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
-                            "name": "constant.numeric.other.separator.thousands.cs"
+                            "name": "constant.numeric.other.separator.thousands.midl"
                           }
                         ]
                       },
                       "3": {
-                        "name": "constant.numeric.other.separator.thousands.cs"
+                        "name": "constant.numeric.other.separator.thousands.midl"
                       },
                       "4": {
-                        "name": "constant.numeric.other.suffix.cs"
+                        "name": "constant.numeric.other.suffix.midl"
                       }
                     }
                   },
@@ -2931,43 +2931,43 @@
                     "match": "(\\G(?=[0-9.])(?!0[xXbB]))([0-9](?:[0-9]|((?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)((?<!_)([eE])(\\+?)(\\-?)((?:[0-9](?:[0-9]|(?:(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])))*)))?((?:(?:(?:(?:(?:[uU]|[uU]l)|[uU]L)|l[uU]?)|L[uU]?)|[fFdDmM])(?!\\w))?$",
                     "captures": {
                       "2": {
-                        "name": "constant.numeric.decimal.cs",
+                        "name": "constant.numeric.decimal.midl",
                         "patterns": [
                           {
                             "match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
-                            "name": "constant.numeric.other.separator.thousands.cs"
+                            "name": "constant.numeric.other.separator.thousands.midl"
                           }
                         ]
                       },
                       "3": {
-                        "name": "constant.numeric.other.separator.thousands.cs"
+                        "name": "constant.numeric.other.separator.thousands.midl"
                       },
                       "5": {
-                        "name": "constant.numeric.other.exponent.cs"
+                        "name": "constant.numeric.other.exponent.midl"
                       },
                       "6": {
-                        "name": "keyword.operator.arithmetic.cs"
+                        "name": "keyword.operator.arithmetic.midl"
                       },
                       "7": {
-                        "name": "keyword.operator.arithmetic.cs"
+                        "name": "keyword.operator.arithmetic.midl"
                       },
                       "8": {
-                        "name": "constant.numeric.decimal.cs",
+                        "name": "constant.numeric.decimal.midl",
                         "patterns": [
                           {
                             "match": "(?<=[0-9a-fA-F])_(?=[0-9a-fA-F])",
-                            "name": "constant.numeric.other.separator.thousands.cs"
+                            "name": "constant.numeric.other.separator.thousands.midl"
                           }
                         ]
                       },
                       "9": {
-                        "name": "constant.numeric.other.suffix.cs"
+                        "name": "constant.numeric.other.suffix.midl"
                       }
                     }
                   },
                   {
                     "match": "(?:(?:[0-9a-zA-Z_\\.]|_)|(?<=[eE])[+-])+",
-                    "name": "invalid.illegal.constant.numeric.cs"
+                    "name": "invalid.illegal.constant.numeric.midl"
                   }
                 ]
               }
@@ -2976,20 +2976,20 @@
         }
       },
       "char-literal": {
-        "name": "string.quoted.single.cs",
+        "name": "string.quoted.single.midl",
         "begin": "'",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.definition.char.begin.cs"
+            "name": "punctuation.definition.char.begin.midl"
           }
         },
         "end": "(\\')|((?:[^\\\\\\n])$)",
         "endCaptures": {
           "1": {
-            "name": "punctuation.definition.char.end.cs"
+            "name": "punctuation.definition.char.end.midl"
           },
           "2": {
-            "name": "invalid.illegal.newline.cs"
+            "name": "invalid.illegal.newline.midl"
           }
         },
         "patterns": [
@@ -2999,24 +2999,24 @@
         ]
       },
       "char-character-escape": {
-        "name": "constant.character.escape.cs",
+        "name": "constant.character.escape.midl",
         "match": "\\\\(['\"\\\\0abfnrtv]|x[0-9a-fA-F]{1,4}|u[0-9a-fA-F]{4})"
       },
       "string-literal": {
-        "name": "string.quoted.double.cs",
+        "name": "string.quoted.double.midl",
         "begin": "(?<!@)\"",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.definition.string.begin.cs"
+            "name": "punctuation.definition.string.begin.midl"
           }
         },
         "end": "(\")|((?:[^\\\\\\n])$)",
         "endCaptures": {
           "1": {
-            "name": "punctuation.definition.string.end.cs"
+            "name": "punctuation.definition.string.end.midl"
           },
           "2": {
-            "name": "invalid.illegal.newline.cs"
+            "name": "invalid.illegal.newline.midl"
           }
         },
         "patterns": [
@@ -3026,21 +3026,21 @@
         ]
       },
       "string-character-escape": {
-        "name": "constant.character.escape.cs",
+        "name": "constant.character.escape.midl",
         "match": "\\\\(['\"\\\\0abfnrtv]|x[0-9a-fA-F]{1,4}|U[0-9a-fA-F]{8}|u[0-9a-fA-F]{4})"
       },
       "verbatim-string-literal": {
-        "name": "string.quoted.double.cs",
+        "name": "string.quoted.double.midl",
         "begin": "@\"",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.definition.string.begin.cs"
+            "name": "punctuation.definition.string.begin.midl"
           }
         },
         "end": "\"(?=[^\"])",
         "endCaptures": {
           "0": {
-            "name": "punctuation.definition.string.end.cs"
+            "name": "punctuation.definition.string.end.midl"
           }
         },
         "patterns": [
@@ -3050,20 +3050,20 @@
         ]
       },
       "verbatim-string-character-escape": {
-        "name": "constant.character.escape.cs",
+        "name": "constant.character.escape.midl",
         "match": "\"\""
       },
       "tuple-literal": {
         "begin": "(\\()(?=.*[:,])",
         "beginCaptures": {
           "1": {
-            "name": "punctuation.parenthesis.open.cs"
+            "name": "punctuation.parenthesis.open.midl"
           }
         },
         "end": "\\)",
         "endCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.close.cs"
+            "name": "punctuation.parenthesis.close.midl"
           }
         },
         "patterns": [
@@ -3085,74 +3085,74 @@
         "begin": "(?x)\n(@?[_[:alpha:]][_[:alnum:]]*)\\s*\n(?=:)",
         "beginCaptures": {
           "1": {
-            "name": "entity.name.variable.tuple-element.cs"
+            "name": "entity.name.variable.tuple-element.midl"
           }
         },
         "end": "(:)",
         "endCaptures": {
           "0": {
-            "name": "punctuation.separator.colon.cs"
+            "name": "punctuation.separator.colon.midl"
           }
         }
       },
       "expression-operators": {
         "patterns": [
           {
-            "name": "keyword.operator.assignment.compound.cs",
+            "name": "keyword.operator.assignment.compound.midl",
             "match": "\\*=|/=|%=|\\+=|-=|\\?\\?="
           },
           {
-            "name": "keyword.operator.assignment.compound.bitwise.cs",
+            "name": "keyword.operator.assignment.compound.bitwise.midl",
             "match": "\\&=|\\^=|<<=|>>=|\\|="
           },
           {
-            "name": "keyword.operator.bitwise.shift.cs",
+            "name": "keyword.operator.bitwise.shift.midl",
             "match": "<<|>>"
           },
           {
-            "name": "keyword.operator.comparison.cs",
+            "name": "keyword.operator.comparison.midl",
             "match": "==|!="
           },
           {
-            "name": "keyword.operator.relational.cs",
+            "name": "keyword.operator.relational.midl",
             "match": "<=|>=|<|>"
           },
           {
-            "name": "keyword.operator.logical.cs",
+            "name": "keyword.operator.logical.midl",
             "match": "\\!|&&|\\|\\|"
           },
           {
-            "name": "keyword.operator.bitwise.cs",
+            "name": "keyword.operator.bitwise.midl",
             "match": "\\&|~|\\^|\\|"
           },
           {
-            "name": "keyword.operator.assignment.cs",
+            "name": "keyword.operator.assignment.midl",
             "match": "\\="
           },
           {
-            "name": "keyword.operator.decrement.cs",
+            "name": "keyword.operator.decrement.midl",
             "match": "--"
           },
           {
-            "name": "keyword.operator.increment.cs",
+            "name": "keyword.operator.increment.midl",
             "match": "\\+\\+"
           },
           {
-            "name": "keyword.operator.arithmetic.cs",
+            "name": "keyword.operator.arithmetic.midl",
             "match": "%|\\*|/|-|\\+"
           },
           {
-            "name": "keyword.operator.null-coalescing.cs",
+            "name": "keyword.operator.null-coalescing.midl",
             "match": "\\?\\?"
           }
         ]
       },
       "switch-literal": {
-        "name": "constant.language.null.cs",
+        "name": "constant.language.null.midl",
         "match": "(?<!\\.)\\bnull\\b",
         "beginCaptures": {
           "1": {
-            "name": "constant.language.null.cs"
+            "name": "constant.language.null.midl"
           }
         },
         "patterns": [
@@ -3171,13 +3171,13 @@
         "begin": "\\?(?!\\s*[?.\\[]|\\s*$)",
         "beginCaptures": {
           "0": {
-            "name": "keyword.operator.conditional.question-mark.cs"
+            "name": "keyword.operator.conditional.question-mark.midl"
           }
         },
         "end": ":",
         "endCaptures": {
           "0": {
-            "name": "keyword.operator.conditional.colon.cs"
+            "name": "keyword.operator.conditional.colon.midl"
           }
         },
         "patterns": [
@@ -3187,20 +3187,20 @@
         ]
       },
       "await-expression": {
-        "name": "keyword.other.await.cs",
+        "name": "keyword.other.await.midl",
         "match": "(?!\\.)\\b(await)\\b"
       },
       "parenthesized-expression": {
         "begin": "\\(",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.open.cs"
+            "name": "punctuation.parenthesis.open.midl"
           }
         },
         "end": "\\)",
         "endCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.close.cs"
+            "name": "punctuation.parenthesis.close.midl"
           }
         },
         "patterns": [
@@ -3213,13 +3213,13 @@
         "begin": "\\{",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.curlybrace.open.cs"
+            "name": "punctuation.curlybrace.open.midl"
           }
         },
         "end": "\\}",
         "endCaptures": {
           "0": {
-            "name": "punctuation.curlybrace.close.cs"
+            "name": "punctuation.curlybrace.close.midl"
           }
         },
         "patterns": [
@@ -3232,14 +3232,14 @@
         ]
       },
       "identifier": {
-        "name": "variable.other.readwrite.cs",
+        "name": "variable.other.readwrite.midl",
         "match": "@?[_[:alpha:]][_[:alnum:]]*"
       },
       "cast-expression": {
         "match": "(?x)\n(\\()\\s*\n(?<type_name>\n  (?:\n    (?:\n      (?:(?<identifier>@?[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n      (?<name_and_type_args> # identifier + type arguments (if any)\n        \\g<identifier>\\s*\n        (?<type_args>\\s*<(?:[^<>]|\\g<type_args>)+>\\s*)?\n      )\n      (?:\\s*\\.\\s*\\g<name_and_type_args>)* | # Are there any more names being dotted into?\n      (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n    )\n    (?:\\s*\\?\\s*)? # nullable suffix?\n    (?:\\s* # array suffix?\n      \\[\n        (?:\\s*,\\s*)* # commata for multi-dimensional arrays\n      \\]\n      \\s*\n      (?:\\?)? # arrays can be nullable reference types\n      \\s*\n    )*\n  )\n)\\s*\n(\\))(?=\\s*-*!*@?[_[:alnum:]\\(])",
         "captures": {
           "1": {
-            "name": "punctuation.parenthesis.open.cs"
+            "name": "punctuation.parenthesis.open.midl"
           },
           "2": {
             "patterns": [
@@ -3249,7 +3249,7 @@
             ]
           },
           "7": {
-            "name": "punctuation.parenthesis.close.cs"
+            "name": "punctuation.parenthesis.close.midl"
           }
         }
       },
@@ -3257,7 +3257,7 @@
         "match": "(?x)\n(?<!\\.)\\b(as)\\b\\s*\n(?<type_name>\n  (?:\n    (?:\n      (?:(?<identifier>@?[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n      (?<name_and_type_args> # identifier + type arguments (if any)\n        \\g<identifier>\\s*\n        (?<type_args>\\s*<(?:[^<>]|\\g<type_args>)+>\\s*)?\n      )\n      (?:\\s*\\.\\s*\\g<name_and_type_args>)* | # Are there any more names being dotted into?\n      (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n    )\n    (?:\\s*\\?\\s*)? # nullable suffix?\n    (?:\\s* # array suffix?\n      \\[\n        (?:\\s*,\\s*)* # commata for multi-dimensional arrays\n      \\]\n      \\s*\n      (?:\\?)? # arrays can be nullable reference types\n      \\s*\n    )*\n  )\n)?",
         "captures": {
           "1": {
-            "name": "keyword.other.as.cs"
+            "name": "keyword.other.as.midl"
           },
           "2": {
             "patterns": [
@@ -3272,7 +3272,7 @@
         "match": "(?x)\n(?<!\\.)\\b(is)\\b\\s*\n(?<type_name>\n  (?:\n    (?:\n      (?:(?<identifier>@?[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n      (?<name_and_type_args> # identifier + type arguments (if any)\n        \\g<identifier>\\s*\n        (?<type_args>\\s*<(?:[^<>]|\\g<type_args>)+>\\s*)?\n      )\n      (?:\\s*\\.\\s*\\g<name_and_type_args>)* | # Are there any more names being dotted into?\n      (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n    )\n    (?:\\s*\\?\\s*)? # nullable suffix?\n    (?:\\s* # array suffix?\n      \\[\n        (?:\\s*,\\s*)* # commata for multi-dimensional arrays\n      \\]\n      \\s*\n      (?:\\?)? # arrays can be nullable reference types\n      \\s*\n    )*\n  )\n)?",
         "captures": {
           "1": {
-            "name": "keyword.other.is.cs"
+            "name": "keyword.other.is.midl"
           },
           "2": {
             "patterns": [
@@ -3287,10 +3287,10 @@
         "match": "\\b(?:(base)|(this))\\b",
         "captures": {
           "1": {
-            "name": "keyword.other.base.cs"
+            "name": "keyword.other.base.midl"
           },
           "2": {
-            "name": "keyword.other.this.cs"
+            "name": "keyword.other.this.midl"
           }
         }
       },
@@ -3298,13 +3298,13 @@
         "begin": "(?x)\n(?:(\\?)\\s*)?                                     # preceding null-conditional operator?\n(?:(\\.)\\s*)?                                     # preceding dot?\n(@?[_[:alpha:]][_[:alnum:]]*)\\s*                   # method name\n(?<type_args>\\s*<([^<>]|\\g<type_args>)+>\\s*)?\\s* # type arguments\n(?=\\()                                           # open paren of argument list",
         "beginCaptures": {
           "1": {
-            "name": "keyword.operator.null-conditional.cs"
+            "name": "keyword.operator.null-conditional.midl"
           },
           "2": {
-            "name": "punctuation.accessor.cs"
+            "name": "punctuation.accessor.midl"
           },
           "3": {
-            "name": "entity.name.function.cs"
+            "name": "entity.name.function.midl"
           },
           "4": {
             "patterns": [
@@ -3325,16 +3325,16 @@
         "begin": "(?x)\n(?:(\\?)\\s*)?                        # preceding null-conditional operator?\n(?:(\\.)\\s*)?                        # preceding dot?\n(?:(@?[_[:alpha:]][_[:alnum:]]*)\\s*)? # property name\n(?:(\\?)\\s*)?                        # null-conditional operator?\n(?=\\[)                              # open bracket of argument list",
         "beginCaptures": {
           "1": {
-            "name": "keyword.operator.null-conditional.cs"
+            "name": "keyword.operator.null-conditional.midl"
           },
           "2": {
-            "name": "punctuation.accessor.cs"
+            "name": "punctuation.accessor.midl"
           },
           "3": {
-            "name": "variable.other.object.property.cs"
+            "name": "variable.other.object.property.midl"
           },
           "4": {
-            "name": "keyword.operator.null-conditional.cs"
+            "name": "keyword.operator.null-conditional.midl"
           }
         },
         "end": "(?<=\\])(?!\\s*\\[)",
@@ -3350,13 +3350,13 @@
             "match": "(?x)\n(?:(\\?)\\s*)?                   # preceding null-conditional operator?\n(\\.)\\s*                        # preceding dot\n(@?[_[:alpha:]][_[:alnum:]]*)\\s* # property name\n(?![_[:alnum:]]|\\(|(\\?)?\\[|<)  # next character is not alpha-numeric, nor a (, [, or <. Also, test for ?[",
             "captures": {
               "1": {
-                "name": "keyword.operator.null-conditional.cs"
+                "name": "keyword.operator.null-conditional.midl"
               },
               "2": {
-                "name": "punctuation.accessor.cs"
+                "name": "punctuation.accessor.midl"
               },
               "3": {
-                "name": "variable.other.object.property.cs"
+                "name": "variable.other.object.property.midl"
               }
             }
           },
@@ -3364,10 +3364,10 @@
             "match": "(?x)\n(\\.)?\\s*\n(@?[_[:alpha:]][_[:alnum:]]*)\n(?<type_params>\\s*<([^<>]|\\g<type_params>)+>\\s*)\n(?=\n  (\\s*\\?)?\n  \\s*\\.\\s*@?[_[:alpha:]][_[:alnum:]]*\n)",
             "captures": {
               "1": {
-                "name": "punctuation.accessor.cs"
+                "name": "punctuation.accessor.midl"
               },
               "2": {
-                "name": "variable.other.object.cs"
+                "name": "variable.other.object.midl"
               },
               "3": {
                 "patterns": [
@@ -3382,7 +3382,7 @@
             "match": "(?x)\n(@?[_[:alpha:]][_[:alnum:]]*)\n(?=\n  (\\s*\\?)?\n  \\s*\\.\\s*@?[_[:alpha:]][_[:alnum:]]*\n)",
             "captures": {
               "1": {
-                "name": "variable.other.object.cs"
+                "name": "variable.other.object.midl"
               }
             }
           }
@@ -3402,7 +3402,7 @@
         "begin": "(?x)\n(new)\\s+\n(?<type_name>\n  (?:\n    (?:\n      (?:(?<identifier>@?[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n      (?<name_and_type_args> # identifier + type arguments (if any)\n        \\g<identifier>\\s*\n        (?<type_args>\\s*<(?:[^<>]|\\g<type_args>)+>\\s*)?\n      )\n      (?:\\s*\\.\\s*\\g<name_and_type_args>)* | # Are there any more names being dotted into?\n      (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n    )\n    (?:\\s*\\?\\s*)? # nullable suffix?\n    (?:\\s* # array suffix?\n      \\[\n        (?:\\s*,\\s*)* # commata for multi-dimensional arrays\n      \\]\n      \\s*\n      (?:\\?)? # arrays can be nullable reference types\n      \\s*\n    )*\n  )\n)\\s*\n(?=\\()",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.new.cs"
+            "name": "keyword.other.new.midl"
           },
           "2": {
             "patterns": [
@@ -3423,7 +3423,7 @@
         "match": "(?x)\n(new)\\s+\n(?<type_name>\n  (?:\n    (?:\n      (?:(?<identifier>@?[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n      (?<name_and_type_args> # identifier + type arguments (if any)\n        \\g<identifier>\\s*\n        (?<type_args>\\s*<(?:[^<>]|\\g<type_args>)+>\\s*)?\n      )\n      (?:\\s*\\.\\s*\\g<name_and_type_args>)* | # Are there any more names being dotted into?\n      (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n    )\n    (?:\\s*\\?\\s*)? # nullable suffix?\n    (?:\\s* # array suffix?\n      \\[\n        (?:\\s*,\\s*)* # commata for multi-dimensional arrays\n      \\]\n      \\s*\n      (?:\\?)? # arrays can be nullable reference types\n      \\s*\n    )*\n  )\n)\\s*\n(?=\\{|$)",
         "captures": {
           "1": {
-            "name": "keyword.other.new.cs"
+            "name": "keyword.other.new.midl"
           },
           "2": {
             "patterns": [
@@ -3438,7 +3438,7 @@
         "begin": "(?x)\n\\b(new|stackalloc)\\b\\s*\n(?<type_name>\n  (?:\n    (?:\n      (?:(?<identifier>@?[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n      (?<name_and_type_args> # identifier + type arguments (if any)\n        \\g<identifier>\\s*\n        (?<type_args>\\s*<(?:[^<>]|\\g<type_args>)+>\\s*)?\n      )\n      (?:\\s*\\.\\s*\\g<name_and_type_args>)* | # Are there any more names being dotted into?\n      (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n    )\n    (?:\\s*\\?\\s*)? # nullable suffix?\n    (?:\\s* # array suffix?\n      \\[\n        (?:\\s*,\\s*)* # commata for multi-dimensional arrays\n      \\]\n      \\s*\n      (?:\\?)? # arrays can be nullable reference types\n      \\s*\n    )*\n  )\n)?\\s*\n(?=\\[)",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.new.cs"
+            "name": "keyword.other.new.midl"
           },
           "2": {
             "patterns": [
@@ -3459,7 +3459,7 @@
         "begin": "\\b(new)\\b\\s*(?=\\{|$)",
         "beginCaptures": {
           "1": {
-            "name": "keyword.other.new.cs"
+            "name": "keyword.other.new.midl"
           }
         },
         "end": "(?<=\\})",
@@ -3473,13 +3473,13 @@
         "begin": "(?=(\\[))",
         "beginCaptures": {
           "1": {
-            "name": "punctuation.squarebracket.open.cs"
+            "name": "punctuation.squarebracket.open.midl"
           }
         },
         "end": "(?=(\\]))",
         "endCaptures": {
           "1": {
-            "name": "punctuation.squarebracket.close.cs"
+            "name": "punctuation.squarebracket.close.midl"
           }
         },
         "patterns": [
@@ -3510,13 +3510,13 @@
         "begin": "(\\()",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.open.cs"
+            "name": "punctuation.parenthesis.open.midl"
           }
         },
         "end": "(\\))",
         "endCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.close.cs"
+            "name": "punctuation.parenthesis.close.midl"
           }
         },
         "patterns": [
@@ -3541,7 +3541,7 @@
         "match": "(?x)\n(?:(?:\\b(ref|params|out|in|this)\\b)\\s+)?\n(?<type_name>\n  (?:\n    (?:ref\\s+)?   # ref return\n    (?:\n      (?:(?<identifier>@?[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n      (?<name_and_type_args> # identifier + type arguments (if any)\n        \\g<identifier>\\s*\n        (?<type_args>\\s*<(?:[^<>]|\\g<type_args>)+>\\s*)?\n      )\n      (?:\\s*\\.\\s*\\g<name_and_type_args>)* | # Are there any more names being dotted into?\n      (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n    )\n    (?:\\s*\\?\\s*)? # nullable suffix?\n    (?:\\s* # array suffix?\n      \\[\n        (?:\\s*,\\s*)* # commata for multi-dimensional arrays\n      \\]\n      \\s*\n      (?:\\?)? # arrays can be nullable reference types\n      \\s*\n    )*\n  )\n)\\s+\n(\\g<identifier>)",
         "captures": {
           "1": {
-            "name": "storage.modifier.cs"
+            "name": "storage.modifier.midl"
           },
           "2": {
             "patterns": [
@@ -3551,7 +3551,7 @@
             ]
           },
           "7": {
-            "name": "entity.name.variable.parameter.cs"
+            "name": "entity.name.variable.parameter.midl"
           }
         }
       },
@@ -3559,13 +3559,13 @@
         "begin": "\\(",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.open.cs"
+            "name": "punctuation.parenthesis.open.midl"
           }
         },
         "end": "\\)",
         "endCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.close.cs"
+            "name": "punctuation.parenthesis.close.midl"
           }
         },
         "patterns": [
@@ -3584,13 +3584,13 @@
         "begin": "\\[",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.squarebracket.open.cs"
+            "name": "punctuation.squarebracket.open.midl"
           }
         },
         "end": "\\]",
         "endCaptures": {
           "0": {
-            "name": "punctuation.squarebracket.close.cs"
+            "name": "punctuation.squarebracket.close.midl"
           }
         },
         "patterns": [
@@ -3609,10 +3609,10 @@
         "begin": "(@?[_[:alpha:]][_[:alnum:]]*)\\s*(:)",
         "beginCaptures": {
           "1": {
-            "name": "entity.name.variable.parameter.cs"
+            "name": "entity.name.variable.parameter.midl"
           },
           "2": {
-            "name": "punctuation.separator.colon.cs"
+            "name": "punctuation.separator.colon.midl"
           }
         },
         "end": "(?=(,|\\)|\\]))",
@@ -3625,7 +3625,7 @@
       "argument": {
         "patterns": [
           {
-            "name": "storage.modifier.cs",
+            "name": "storage.modifier.midl",
             "match": "\\b(ref|out|in)\\b"
           },
           {
@@ -3640,7 +3640,7 @@
         "begin": "(?x)\n\\b(from)\\b\\s*\n(?<type_name>\n  (?:\n    (?:\n      (?:(?<identifier>@?[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n      (?<name_and_type_args> # identifier + type arguments (if any)\n        \\g<identifier>\\s*\n        (?<type_args>\\s*<(?:[^<>]|\\g<type_args>)+>\\s*)?\n      )\n      (?:\\s*\\.\\s*\\g<name_and_type_args>)* | # Are there any more names being dotted into?\n      (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n    )\n    (?:\\s*\\?\\s*)? # nullable suffix?\n    (?:\\s* # array suffix?\n      \\[\n        (?:\\s*,\\s*)* # commata for multi-dimensional arrays\n      \\]\n      \\s*\n      (?:\\?)? # arrays can be nullable reference types\n      \\s*\n    )*\n  )\n)?\n\\s+(\\g<identifier>)\\b\\s*\n\\b(in)\\b\\s*",
         "beginCaptures": {
           "1": {
-            "name": "keyword.query.from.cs"
+            "name": "keyword.query.from.midl"
           },
           "2": {
             "patterns": [
@@ -3650,10 +3650,10 @@
             ]
           },
           "7": {
-            "name": "entity.name.variable.range-variable.cs"
+            "name": "entity.name.variable.range-variable.midl"
           },
           "8": {
-            "name": "keyword.query.in.cs"
+            "name": "keyword.query.in.midl"
           }
         },
         "end": "(?=;|\\))",
@@ -3692,13 +3692,13 @@
         "begin": "(?x)\n\\b(let)\\b\\s*\n(@?[_[:alpha:]][_[:alnum:]]*)\\b\\s*\n(=)\\s*",
         "beginCaptures": {
           "1": {
-            "name": "keyword.query.let.cs"
+            "name": "keyword.query.let.midl"
           },
           "2": {
-            "name": "entity.name.variable.range-variable.cs"
+            "name": "entity.name.variable.range-variable.midl"
           },
           "3": {
-            "name": "keyword.operator.assignment.cs"
+            "name": "keyword.operator.assignment.midl"
           }
         },
         "end": "(?=;|\\))",
@@ -3715,7 +3715,7 @@
         "begin": "(?x)\n\\b(where)\\b\\s*",
         "beginCaptures": {
           "1": {
-            "name": "keyword.query.where.cs"
+            "name": "keyword.query.where.midl"
           }
         },
         "end": "(?=;|\\))",
@@ -3732,7 +3732,7 @@
         "begin": "(?x)\n\\b(join)\\b\\s*\n(?<type_name>\n  (?:\n    (?:\n      (?:(?<identifier>@?[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n      (?<name_and_type_args> # identifier + type arguments (if any)\n        \\g<identifier>\\s*\n        (?<type_args>\\s*<(?:[^<>]|\\g<type_args>)+>\\s*)?\n      )\n      (?:\\s*\\.\\s*\\g<name_and_type_args>)* | # Are there any more names being dotted into?\n      (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n    )\n    (?:\\s*\\?\\s*)? # nullable suffix?\n    (?:\\s* # array suffix?\n      \\[\n        (?:\\s*,\\s*)* # commata for multi-dimensional arrays\n      \\]\n      \\s*\n      (?:\\?)? # arrays can be nullable reference types\n      \\s*\n    )*\n  )\n)?\n\\s+(\\g<identifier>)\\b\\s*\n\\b(in)\\b\\s*",
         "beginCaptures": {
           "1": {
-            "name": "keyword.query.join.cs"
+            "name": "keyword.query.join.midl"
           },
           "2": {
             "patterns": [
@@ -3742,10 +3742,10 @@
             ]
           },
           "7": {
-            "name": "entity.name.variable.range-variable.cs"
+            "name": "entity.name.variable.range-variable.midl"
           },
           "8": {
-            "name": "keyword.query.in.cs"
+            "name": "keyword.query.in.midl"
           }
         },
         "end": "(?=;|\\))",
@@ -3771,7 +3771,7 @@
         "match": "\\b(on)\\b\\s*",
         "captures": {
           "1": {
-            "name": "keyword.query.on.cs"
+            "name": "keyword.query.on.midl"
           }
         }
       },
@@ -3779,7 +3779,7 @@
         "match": "\\b(equals)\\b\\s*",
         "captures": {
           "1": {
-            "name": "keyword.query.equals.cs"
+            "name": "keyword.query.equals.midl"
           }
         }
       },
@@ -3787,10 +3787,10 @@
         "match": "(?x)\n\\b(into)\\b\\s*\n(@?[_[:alpha:]][_[:alnum:]]*)\\b\\s*",
         "captures": {
           "1": {
-            "name": "keyword.query.into.cs"
+            "name": "keyword.query.into.midl"
           },
           "2": {
-            "name": "entity.name.variable.range-variable.cs"
+            "name": "entity.name.variable.range-variable.midl"
           }
         }
       },
@@ -3798,7 +3798,7 @@
         "begin": "\\b(orderby)\\b\\s*",
         "beginCaptures": {
           "1": {
-            "name": "keyword.query.orderby.cs"
+            "name": "keyword.query.orderby.midl"
           }
         },
         "end": "(?=;|\\))",
@@ -3821,10 +3821,10 @@
         "match": "\\b(?:(ascending)|(descending))\\b",
         "captures": {
           "1": {
-            "name": "keyword.query.ascending.cs"
+            "name": "keyword.query.ascending.midl"
           },
           "2": {
-            "name": "keyword.query.descending.cs"
+            "name": "keyword.query.descending.midl"
           }
         }
       },
@@ -3832,7 +3832,7 @@
         "begin": "\\b(select)\\b\\s*",
         "beginCaptures": {
           "1": {
-            "name": "keyword.query.select.cs"
+            "name": "keyword.query.select.midl"
           }
         },
         "end": "(?=;|\\))",
@@ -3849,7 +3849,7 @@
         "begin": "\\b(group)\\b\\s*",
         "beginCaptures": {
           "1": {
-            "name": "keyword.query.group.cs"
+            "name": "keyword.query.group.midl"
           }
         },
         "end": "(?=;|\\))",
@@ -3872,7 +3872,7 @@
         "match": "\\b(by)\\b\\s*",
         "captures": {
           "1": {
-            "name": "keyword.query.by.cs"
+            "name": "keyword.query.by.midl"
           }
         }
       },
@@ -3880,10 +3880,10 @@
         "match": "(?x)\n\\b(into)\\b\\s*\n(@?[_[:alpha:]][_[:alnum:]]*)\\b\\s*",
         "captures": {
           "1": {
-            "name": "keyword.query.into.cs"
+            "name": "keyword.query.into.midl"
           },
           "2": {
-            "name": "entity.name.variable.range-variable.cs"
+            "name": "entity.name.variable.range-variable.midl"
           }
         }
       },
@@ -3893,13 +3893,13 @@
             "begin": "(?x)\n(?:\\b(async)\\b\\s*)?\n(@?[_[:alpha:]][_[:alnum:]]*)\\b\\s*\n(=>)",
             "beginCaptures": {
               "1": {
-                "name": "storage.modifier.cs"
+                "name": "storage.modifier.midl"
               },
               "2": {
-                "name": "entity.name.variable.parameter.cs"
+                "name": "entity.name.variable.parameter.midl"
               },
               "3": {
-                "name": "keyword.operator.arrow.cs"
+                "name": "keyword.operator.arrow.midl"
               }
             },
             "end": "(?=\\)|;|}|,)",
@@ -3919,7 +3919,7 @@
             "begin": "(?x)\n(?:\\b(async)\\b\\s*)?\n(\\(.*?\\))\\s*\n(=>)",
             "beginCaptures": {
               "1": {
-                "name": "storage.modifier.cs"
+                "name": "storage.modifier.midl"
               },
               "2": {
                 "patterns": [
@@ -3929,7 +3929,7 @@
                 ]
               },
               "3": {
-                "name": "keyword.operator.arrow.cs"
+                "name": "keyword.operator.arrow.midl"
               }
             },
             "end": "(?=\\)|;|}|,)",
@@ -3949,10 +3949,10 @@
             "begin": "(?x)\n(?:\\b(async)\\b\\s*)?\n(?:\\b(delegate)\\b\\s*)",
             "beginCaptures": {
               "1": {
-                "name": "storage.modifier.cs"
+                "name": "storage.modifier.midl"
               },
               "2": {
-                "name": "keyword.other.delegate.cs"
+                "name": "keyword.other.delegate.midl"
               }
             },
             "end": "(?=\\)|;|}|,)",
@@ -3974,13 +3974,13 @@
         "begin": "\\(",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.open.cs"
+            "name": "punctuation.parenthesis.open.midl"
           }
         },
         "end": "\\)",
         "endCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.close.cs"
+            "name": "punctuation.parenthesis.close.midl"
           }
         },
         "patterns": [
@@ -4002,7 +4002,7 @@
         "match": "(?x)\n(?:\\b(ref|out|in)\\b)?\\s*\n(?:(?<type_name>\n  (?:\n    (?:\n      (?:(?<identifier>@?[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n      (?<name_and_type_args> # identifier + type arguments (if any)\n        \\g<identifier>\\s*\n        (?<type_args>\\s*<(?:[^<>]|\\g<type_args>)+>\\s*)?\n      )\n      (?:\\s*\\.\\s*\\g<name_and_type_args>)* | # Are there any more names being dotted into?\n      (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n    )\n    (?:\\s*\\?\\s*)? # nullable suffix?\n    (?:\\s* # array suffix?\n      \\[\n        (?:\\s*,\\s*)* # commata for multi-dimensional arrays\n      \\]\n      \\s*\n      (?:\\?)? # arrays can be nullable reference types\n      \\s*\n    )*\n  )\n)\\s+)?\n(\\g<identifier>)\\b\\s*\n(?=[,)])",
         "captures": {
           "1": {
-            "name": "storage.modifier.cs"
+            "name": "storage.modifier.midl"
           },
           "2": {
             "patterns": [
@@ -4012,12 +4012,12 @@
             ]
           },
           "7": {
-            "name": "entity.name.variable.parameter.cs"
+            "name": "entity.name.variable.parameter.midl"
           }
         }
       },
       "type": {
-        "name": "meta.type.cs",
+        "name": "meta.type.midl",
         "patterns": [
           {
             "include": "#comment"
@@ -4049,24 +4049,24 @@
         ]
       },
       "ref-modifier": {
-        "name": "storage.modifier.cs",
+        "name": "storage.modifier.midl",
         "match": "\\b(ref)\\b"
       },
       "readonly-modifier": {
-        "name": "storage.modifier.cs",
+        "name": "storage.modifier.midl",
         "match": "\\b(readonly)\\b"
       },
       "tuple-type": {
         "begin": "\\(",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.open.cs"
+            "name": "punctuation.parenthesis.open.midl"
           }
         },
         "end": "\\)",
         "endCaptures": {
           "0": {
-            "name": "punctuation.parenthesis.close.cs"
+            "name": "punctuation.parenthesis.close.midl"
           }
         },
         "patterns": [
@@ -4089,7 +4089,7 @@
             ]
           },
           "6": {
-            "name": "entity.name.variable.tuple-element.cs"
+            "name": "entity.name.variable.tuple-element.midl"
           }
         }
       },
@@ -4097,7 +4097,7 @@
         "match": "\\b(bool|byte|char|decimal|double|float|int|long|object|sbyte|short|string|uint|ulong|ushort|void|dynamic)\\b",
         "captures": {
           "1": {
-            "name": "keyword.type.cs"
+            "name": "keyword.type.midl"
           }
         }
       },
@@ -4107,10 +4107,10 @@
             "match": "(@?[_[:alpha:]][_[:alnum:]]*)\\s*(\\:\\:)",
             "captures": {
               "1": {
-                "name": "entity.name.type.alias.cs"
+                "name": "entity.name.type.alias.midl"
               },
               "2": {
-                "name": "punctuation.separator.coloncolon.cs"
+                "name": "punctuation.separator.coloncolon.midl"
               }
             }
           },
@@ -4118,10 +4118,10 @@
             "match": "(@?[_[:alpha:]][_[:alnum:]]*)\\s*(\\.)",
             "captures": {
               "1": {
-                "name": "entity.name.type.cs"
+                "name": "entity.name.type.midl"
               },
               "2": {
-                "name": "punctuation.accessor.cs"
+                "name": "punctuation.accessor.midl"
               }
             }
           },
@@ -4129,15 +4129,15 @@
             "match": "(\\.)\\s*(@?[_[:alpha:]][_[:alnum:]]*)",
             "captures": {
               "1": {
-                "name": "punctuation.accessor.cs"
+                "name": "punctuation.accessor.midl"
               },
               "2": {
-                "name": "entity.name.type.cs"
+                "name": "entity.name.type.midl"
               }
             }
           },
           {
-            "name": "entity.name.type.cs",
+            "name": "entity.name.type.midl",
             "match": "@?[_[:alpha:]][_[:alnum:]]*"
           }
         ]
@@ -4146,13 +4146,13 @@
         "begin": "<",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.definition.typeparameters.begin.cs"
+            "name": "punctuation.definition.typeparameters.begin.midl"
           }
         },
         "end": ">",
         "endCaptures": {
           "0": {
-            "name": "punctuation.definition.typeparameters.end.cs"
+            "name": "punctuation.definition.typeparameters.end.midl"
           }
         },
         "patterns": [
@@ -4171,13 +4171,13 @@
         "begin": "\\[",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.squarebracket.open.cs"
+            "name": "punctuation.squarebracket.open.midl"
           }
         },
         "end": "\\]",
         "endCaptures": {
           "0": {
-            "name": "punctuation.squarebracket.close.cs"
+            "name": "punctuation.squarebracket.close.midl"
           }
         },
         "patterns": [
@@ -4190,32 +4190,32 @@
         "match": "\\?",
         "captures": {
           "0": {
-            "name": "punctuation.separator.question-mark.cs"
+            "name": "punctuation.separator.question-mark.midl"
           }
         }
       },
       "operator-assignment": {
-        "name": "keyword.operator.assignment.cs",
+        "name": "keyword.operator.assignment.midl",
         "match": "(?<!=|!)(=)(?!=)"
       },
       "punctuation-comma": {
-        "name": "punctuation.separator.comma.cs",
+        "name": "punctuation.separator.comma.midl",
         "match": ","
       },
       "punctuation-semicolon": {
-        "name": "punctuation.terminator.statement.cs",
+        "name": "punctuation.terminator.statement.midl",
         "match": ";"
       },
       "punctuation-accessor": {
-        "name": "punctuation.accessor.cs",
+        "name": "punctuation.accessor.midl",
         "match": "\\."
       },
       "preprocessor": {
-        "name": "meta.preprocessor.cs",
+        "name": "meta.preprocessor.midl",
         "begin": "^\\s*(\\#)\\s*",
         "beginCaptures": {
           "1": {
-            "name": "punctuation.separator.hash.cs"
+            "name": "punctuation.separator.hash.midl"
           }
         },
         "end": "(?<=$)",
@@ -4262,13 +4262,13 @@
         "match": "\\b(?:(define)|(undef))\\b\\s*\\b([_[:alpha:]][_[:alnum:]]*)\\b",
         "captures": {
           "1": {
-            "name": "keyword.preprocessor.define.cs"
+            "name": "keyword.preprocessor.define.midl"
           },
           "2": {
-            "name": "keyword.preprocessor.undef.cs"
+            "name": "keyword.preprocessor.undef.midl"
           },
           "3": {
-            "name": "entity.name.variable.preprocessor.symbol.cs"
+            "name": "entity.name.variable.preprocessor.symbol.midl"
           }
         }
       },
@@ -4276,10 +4276,10 @@
         "begin": "\\b(?:(if)|(elif))\\b",
         "beginCaptures": {
           "1": {
-            "name": "keyword.preprocessor.if.cs"
+            "name": "keyword.preprocessor.if.midl"
           },
           "2": {
-            "name": "keyword.preprocessor.elif.cs"
+            "name": "keyword.preprocessor.elif.midl"
           }
         },
         "end": "(?=$)",
@@ -4296,10 +4296,10 @@
         "match": "\\b(?:(else)|(endif))\\b",
         "captures": {
           "1": {
-            "name": "keyword.preprocessor.else.cs"
+            "name": "keyword.preprocessor.else.midl"
           },
           "2": {
-            "name": "keyword.preprocessor.endif.cs"
+            "name": "keyword.preprocessor.endif.midl"
           }
         }
       },
@@ -4307,13 +4307,13 @@
         "match": "\\b(?:(warning)|(error))\\b\\s*(.*)(?=$)",
         "captures": {
           "1": {
-            "name": "keyword.preprocessor.warning.cs"
+            "name": "keyword.preprocessor.warning.midl"
           },
           "2": {
-            "name": "keyword.preprocessor.error.cs"
+            "name": "keyword.preprocessor.error.midl"
           },
           "3": {
-            "name": "string.unquoted.preprocessor.message.cs"
+            "name": "string.unquoted.preprocessor.message.midl"
           }
         }
       },
@@ -4321,7 +4321,7 @@
         "begin": "\\b(load)\\b",
         "beginCaptures": {
           "1": {
-            "name": "keyword.preprocessor.load.cs"
+            "name": "keyword.preprocessor.load.midl"
           }
         },
         "end": "(?=$)",
@@ -4330,7 +4330,7 @@
             "match": "\\\"[^\"]*\\\"",
             "captures": {
               "0": {
-                "name": "string.quoted.double.cs"
+                "name": "string.quoted.double.midl"
               }
             }
           }
@@ -4340,7 +4340,7 @@
         "begin": "\\b(r)\\b",
         "beginCaptures": {
           "1": {
-            "name": "keyword.preprocessor.r.cs"
+            "name": "keyword.preprocessor.r.midl"
           }
         },
         "end": "(?=$)",
@@ -4349,7 +4349,7 @@
             "match": "\\\"[^\"]*\\\"",
             "captures": {
               "0": {
-                "name": "string.quoted.double.cs"
+                "name": "string.quoted.double.midl"
               }
             }
           }
@@ -4359,10 +4359,10 @@
         "match": "\\b(region)\\b\\s*(.*)(?=$)",
         "captures": {
           "1": {
-            "name": "keyword.preprocessor.region.cs"
+            "name": "keyword.preprocessor.region.midl"
           },
           "2": {
-            "name": "string.unquoted.preprocessor.message.cs"
+            "name": "string.unquoted.preprocessor.message.midl"
           }
         }
       },
@@ -4370,7 +4370,7 @@
         "match": "\\b(endregion)\\b",
         "captures": {
           "1": {
-            "name": "keyword.preprocessor.endregion.cs"
+            "name": "keyword.preprocessor.endregion.midl"
           }
         }
       },
@@ -4378,7 +4378,7 @@
         "begin": "\\b(line)\\b",
         "beginCaptures": {
           "1": {
-            "name": "keyword.preprocessor.line.cs"
+            "name": "keyword.preprocessor.line.midl"
           }
         },
         "end": "(?=$)",
@@ -4387,10 +4387,10 @@
             "match": "\\b(?:(default|hidden))",
             "captures": {
               "1": {
-                "name": "keyword.preprocessor.default.cs"
+                "name": "keyword.preprocessor.default.midl"
               },
               "2": {
-                "name": "keyword.preprocessor.hidden.cs"
+                "name": "keyword.preprocessor.hidden.midl"
               }
             }
           },
@@ -4398,7 +4398,7 @@
             "match": "[0-9]+",
             "captures": {
               "0": {
-                "name": "constant.numeric.decimal.cs"
+                "name": "constant.numeric.decimal.midl"
               }
             }
           },
@@ -4406,7 +4406,7 @@
             "match": "\\\"[^\"]*\\\"",
             "captures": {
               "0": {
-                "name": "string.quoted.double.cs"
+                "name": "string.quoted.double.midl"
               }
             }
           }
@@ -4416,16 +4416,16 @@
         "match": "\\b(pragma)\\b\\s*\\b(warning)\\b\\s*\\b(?:(disable)|(restore))\\b(\\s*[0-9]+(?:\\s*,\\s*[0-9]+)?)?",
         "captures": {
           "1": {
-            "name": "keyword.preprocessor.pragma.cs"
+            "name": "keyword.preprocessor.pragma.midl"
           },
           "2": {
-            "name": "keyword.preprocessor.warning.cs"
+            "name": "keyword.preprocessor.warning.midl"
           },
           "3": {
-            "name": "keyword.preprocessor.disable.cs"
+            "name": "keyword.preprocessor.disable.midl"
           },
           "4": {
-            "name": "keyword.preprocessor.restore.cs"
+            "name": "keyword.preprocessor.restore.midl"
           },
           "5": {
             "patterns": [
@@ -4433,7 +4433,7 @@
                 "match": "[0-9]+",
                 "captures": {
                   "0": {
-                    "name": "constant.numeric.decimal.cs"
+                    "name": "constant.numeric.decimal.midl"
                   }
                 }
               },
@@ -4448,19 +4448,19 @@
         "match": "\\b(pragma)\\b\\s*\\b(checksum)\\b\\s*(\\\"[^\"]*\\\")\\s*(\\\"[^\"]*\\\")\\s*(\\\"[^\"]*\\\")",
         "captures": {
           "1": {
-            "name": "keyword.preprocessor.pragma.cs"
+            "name": "keyword.preprocessor.pragma.midl"
           },
           "2": {
-            "name": "keyword.preprocessor.checksum.cs"
+            "name": "keyword.preprocessor.checksum.midl"
           },
           "3": {
-            "name": "string.quoted.double.cs"
+            "name": "string.quoted.double.midl"
           },
           "4": {
-            "name": "string.quoted.double.cs"
+            "name": "string.quoted.double.midl"
           },
           "5": {
-            "name": "string.quoted.double.cs"
+            "name": "string.quoted.double.midl"
           }
         }
       },
@@ -4470,13 +4470,13 @@
             "begin": "\\(",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.parenthesis.open.cs"
+                "name": "punctuation.parenthesis.open.midl"
               }
             },
             "end": "\\)",
             "endCaptures": {
               "0": {
-                "name": "punctuation.parenthesis.close.cs"
+                "name": "punctuation.parenthesis.close.midl"
               }
             },
             "patterns": [
@@ -4489,13 +4489,13 @@
             "match": "\\b(?:(true)|(false)|([_[:alpha:]][_[:alnum:]]*))\\b",
             "captures": {
               "1": {
-                "name": "constant.language.boolean.true.cs"
+                "name": "constant.language.boolean.true.midl"
               },
               "2": {
-                "name": "constant.language.boolean.false.cs"
+                "name": "constant.language.boolean.false.midl"
               },
               "3": {
-                "name": "entity.name.variable.preprocessor.symbol.cs"
+                "name": "entity.name.variable.preprocessor.symbol.midl"
               }
             }
           },
@@ -4503,10 +4503,10 @@
             "match": "(==|!=)|(\\!|&&|\\|\\|)",
             "captures": {
               "1": {
-                "name": "keyword.operator.comparison.cs"
+                "name": "keyword.operator.comparison.midl"
               },
               "2": {
-                "name": "keyword.operator.logical.cs"
+                "name": "keyword.operator.logical.midl"
               }
             }
           }
@@ -4515,17 +4515,17 @@
       "comment": {
         "patterns": [
           {
-            "name": "comment.block.cs",
+            "name": "comment.block.midl",
             "begin": "/\\*",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.definition.comment.cs"
+                "name": "punctuation.definition.comment.midl"
               }
             },
             "end": "\\*/",
             "endCaptures": {
               "0": {
-                "name": "punctuation.definition.comment.cs"
+                "name": "punctuation.definition.comment.midl"
               }
             }
           },
@@ -4533,17 +4533,17 @@
             "begin": "(^\\s+)?(?=//)",
             "beginCaptures": {
               "1": {
-                "name": "punctuation.whitespace.comment.leading.cs"
+                "name": "punctuation.whitespace.comment.leading.midl"
               }
             },
             "end": "(?=$)",
             "patterns": [
               {
-                "name": "comment.block.documentation.cs",
+                "name": "comment.block.documentation.midl",
                 "begin": "(?<!/)///(?!/)",
                 "beginCaptures": {
                   "0": {
-                    "name": "punctuation.definition.comment.cs"
+                    "name": "punctuation.definition.comment.midl"
                   }
                 },
                 "end": "(?=$)",
@@ -4554,11 +4554,11 @@
                 ]
               },
               {
-                "name": "comment.line.double-slash.cs",
+                "name": "comment.line.double-slash.midl",
                 "begin": "(?<!/)//(?:(?!/)|(?=//))",
                 "beginCaptures": {
                   "0": {
-                    "name": "punctuation.definition.comment.cs"
+                    "name": "punctuation.definition.comment.midl"
                   }
                 },
                 "end": "(?=$)"
@@ -4584,29 +4584,29 @@
         ]
       },
       "xml-tag": {
-        "name": "meta.tag.cs",
+        "name": "meta.tag.midl",
         "begin": "(?x)\n(</?)\n(\n  (?:\n    ([-_[:alnum:]]+)\n    (:)\n  )?\n  ([-_[:alnum:]]+)\n)",
         "beginCaptures": {
           "1": {
-            "name": "punctuation.definition.tag.cs"
+            "name": "punctuation.definition.tag.midl"
           },
           "2": {
-            "name": "entity.name.tag.cs"
+            "name": "entity.name.tag.midl"
           },
           "3": {
-            "name": "entity.name.tag.namespace.cs"
+            "name": "entity.name.tag.namespace.midl"
           },
           "4": {
-            "name": "punctuation.separator.colon.cs"
+            "name": "punctuation.separator.colon.midl"
           },
           "5": {
-            "name": "entity.name.tag.localname.cs"
+            "name": "entity.name.tag.localname.midl"
           }
         },
         "end": "(/?>)",
         "endCaptures": {
           "1": {
-            "name": "punctuation.definition.tag.cs"
+            "name": "punctuation.definition.tag.midl"
           }
         },
         "patterns": [
@@ -4621,19 +4621,19 @@
             "match": "(?x)\n(?:^|\\s+)\n(\n  (?:\n    ([-_[:alnum:]]+)\n    (:)\n  )?\n  ([-_[:alnum:]]+)\n)\n(=)",
             "captures": {
               "1": {
-                "name": "entity.other.attribute-name.cs"
+                "name": "entity.other.attribute-name.midl"
               },
               "2": {
-                "name": "entity.other.attribute-name.namespace.cs"
+                "name": "entity.other.attribute-name.namespace.midl"
               },
               "3": {
-                "name": "punctuation.separator.colon.cs"
+                "name": "punctuation.separator.colon.midl"
               },
               "4": {
-                "name": "entity.other.attribute-name.localname.cs"
+                "name": "entity.other.attribute-name.localname.midl"
               },
               "5": {
-                "name": "punctuation.separator.equals.cs"
+                "name": "punctuation.separator.equals.midl"
               }
             }
           },
@@ -4643,34 +4643,34 @@
         ]
       },
       "xml-cdata": {
-        "name": "string.unquoted.cdata.cs",
+        "name": "string.unquoted.cdata.midl",
         "begin": "<!\\[CDATA\\[",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.definition.string.begin.cs"
+            "name": "punctuation.definition.string.begin.midl"
           }
         },
         "end": "\\]\\]>",
         "endCaptures": {
           "0": {
-            "name": "punctuation.definition.string.end.cs"
+            "name": "punctuation.definition.string.end.midl"
           }
         }
       },
       "xml-string": {
         "patterns": [
           {
-            "name": "string.quoted.single.cs",
+            "name": "string.quoted.single.midl",
             "begin": "\\'",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.definition.string.begin.cs"
+                "name": "punctuation.definition.string.begin.midl"
               }
             },
             "end": "\\'",
             "endCaptures": {
               "0": {
-                "name": "punctuation.definition.string.end.cs"
+                "name": "punctuation.definition.string.end.midl"
               }
             },
             "patterns": [
@@ -4680,17 +4680,17 @@
             ]
           },
           {
-            "name": "string.quoted.double.cs",
+            "name": "string.quoted.double.midl",
             "begin": "\\\"",
             "beginCaptures": {
               "0": {
-                "name": "punctuation.definition.string.begin.cs"
+                "name": "punctuation.definition.string.begin.midl"
               }
             },
             "end": "\\\"",
             "endCaptures": {
               "0": {
-                "name": "punctuation.definition.string.end.cs"
+                "name": "punctuation.definition.string.end.midl"
               }
             },
             "patterns": [
@@ -4704,35 +4704,35 @@
       "xml-character-entity": {
         "patterns": [
           {
-            "name": "constant.character.entity.cs",
+            "name": "constant.character.entity.midl",
             "match": "(?x)\n(&)\n(\n  (?:[[:alpha:]:_][[:alnum:]:_.-]*)|\n  (?:\\#[[:digit:]]+)|\n  (?:\\#x[[:xdigit:]]+)\n)\n(;)",
             "captures": {
               "1": {
-                "name": "punctuation.definition.constant.cs"
+                "name": "punctuation.definition.constant.midl"
               },
               "3": {
-                "name": "punctuation.definition.constant.cs"
+                "name": "punctuation.definition.constant.midl"
               }
             }
           },
           {
-            "name": "invalid.illegal.bad-ampersand.cs",
+            "name": "invalid.illegal.bad-ampersand.midl",
             "match": "&"
           }
         ]
       },
       "xml-comment": {
-        "name": "comment.block.cs",
+        "name": "comment.block.midl",
         "begin": "<!--",
         "beginCaptures": {
           "0": {
-            "name": "punctuation.definition.comment.cs"
+            "name": "punctuation.definition.comment.midl"
           }
         },
         "end": "-->",
         "endCaptures": {
           "0": {
-            "name": "punctuation.definition.comment.cs"
+            "name": "punctuation.definition.comment.midl"
           }
         }
       }
