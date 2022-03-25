@@ -4560,6 +4560,27 @@
 				  "end": "(?=$)"
 				}
 			  ]
+			},
+			{
+				"begin": "(^[ \\t]+)?(?=--)",
+				"beginCaptures": {
+					"1": {
+						"name": "punctuation.whitespace.comment.leading.midl"
+					}
+				},
+				"end": "(?!\\G)",
+				"patterns": [
+					{
+						"begin": "--",
+						"beginCaptures": {
+							"0": {
+								"name": "punctuation.definition.comment.midl"
+							}
+						},
+						"end": "\\n",
+						"name": "comment.line.double-dash.midl"
+					}
+				]
 			}
 		  ]
 		},
